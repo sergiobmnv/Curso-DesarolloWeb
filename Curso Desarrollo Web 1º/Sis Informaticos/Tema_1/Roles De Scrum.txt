@@ -1,0 +1,20 @@
+	**Roles De Scrum**
+	
+	-Scrum Master. 	---> (Es el que controla la metodologia).
+	-Product Owner. ---> (Es el que se encarga de representar al cliente);(Product Backlog).
+	-Development. 	---> (Equipo de desarrollo o de trabajo).
+
+**Eventos**
+
+	-Daily Scrum 		-->15 Min.
+	-Sprint Planing. 	---> (Desgranarlar Las Tareas).
+	-Sprint. 		---> (Es el ciclo el cual se trabaja cuando ya este todo planeado y desgranado las tareas).
+	-Sprint Revieu. 	---> (Se Inclementa la Funcionalidad).
+	-Spirnt Retroespective. ---> (Seria la siguiente reunion en el cual se ve que llevamos hecho y en que podemos mejorar).
+	-Refirement. 		---> (Refinar las tareas, es decir ver que se puede añadir a las tareas etc).
+
+**Artefactos**
+
+	-Product Backlog 	---> (Elementos del Product Backlog: Épica).
+	-Sprint Backlog. 	---> (Elegir las Historias de Usuario y Planearlas etc).
+	-Product Increment.	---> (El Inclemento de La Funcionalidad, enseñarle al cliente algo acabado del proyecto).

@@ -1,0 +1,34 @@
+
+* {
+
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.caja {
+
+    background-color: aquamarine;
+    width: 200px;
+    border: 10px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.caja p {
+
+    background: rgb(174, 74, 74);
+    padding: 20px;
+}
+
+
+h1 {
+
+    text-align: center;
+}
+
+h2 {
+
+    text-decoration: line-through;
+    text-align: right;
+}

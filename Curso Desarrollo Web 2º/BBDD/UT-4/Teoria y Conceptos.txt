@@ -1,0 +1,27 @@
+    -- Modificar una tabla 
+	-- ALTER TABLE AGENTE
+
+    -- Añade una nueva columna llamada localidad:
+	-- ADD COLUMN LOCALIDAD VARCHAR(15) NOT NULL COMMENT 'Localidad del agente';
+
+    -- Cambiar el nombre de una columna:
+	-- ALTER TABLE AGENTE
+	-- CHANGE EMAIL CORREO_ELECTRONICO VARCHAR(100);
+
+    -- Borrar una columna: 
+	-- DROP COLUMN LOCALIDAD;
+
+    -- Modificar los datos de una columna:
+	-- MODIFY COLUMN NOMBRE VARCHAR(30) NOT NULL;
+
+   -- Crear una nueva foreign key en una tabla existente:
+	-- ALTER TABLE HOTEL
+	-- ADD COLUMN ID_AGENCIA INT(11) NOT NULL,
+	-- ADD CONSTRAINT FK_HOTEL_AGENCIA FOREIGN KEY (ID_AGENCIA) REFERENCES AGENCIA (ID_AGENCIA);
+
+   -- Insertar datos:
+	-- INSERT INTO  AGENCIA (ID_AGENCIA, NOMBRE, CIUDAD, IS_ONLINE)
+	-- 	VALUES (1, 'Atrapalo', 'Madrid', 1)
+
+   -- Borrar datos:
+	-- DELETE FROM AGENCIA;

@@ -1,0 +1,51 @@
+-- Crear tabla con clave primaria
+CREATE TABLE TablaConPK (
+    id NUMBER PRIMARY KEY,
+    campo1 NUMBER,
+    campo2 VARCHAR2(50),
+    campo3 DATE,
+    campo4 TIMESTAMP,
+    campo5 VARCHAR2(100),
+    campo6 NUMBER,
+    campo7 DATE,
+    campo8 TIMESTAMP,
+    campo9 VARCHAR2(200),
+    campo10 VARCHAR2(2000)
+);
+
+-- Crear tabla sin clave primaria
+CREATE TABLE TablaSinPK (
+    id NUMBER,
+    campo1 NUMBER,
+    campo2 VARCHAR2(50),
+    campo3 DATE,
+    campo4 TIMESTAMP,
+    campo5 VARCHAR2(100),
+    campo6 NUMBER,
+    campo7 DATE,
+    campo8 TIMESTAMP,
+    campo9 VARCHAR2(200),
+    campo10 VARCHAR2(2000)
+);
+
+-- Generar script para 10.000 inserts en la tabla sin clave primaria
+DECLARE
+BEGIN
+    FOR i IN 1..10000 LOOP
+        INSERT INTO TablaSinPK VALUES (
+            i,
+            ROUND(DBMS_RANDOM.VALUE(1, 100)),
+            'Valor ' || i,
+            SYSDATE - ROUND(DBMS_RANDOM.VALUE(1, 365)),
+            CURRENT_TIMESTAMP - INTERVAL '1' DAY * ROUND(DBMS_RANDOM.VALUE(1, 365)),
+            'Texto ' || i,
+            ROUND(DBMS_RANDOM.VALUE(100, 1000)),
+            SYSDATE - ROUND(DBMS_RANDOM.VALUE(1, 365)),
+            CURRENT_TIMESTAMP - INTERVAL '1' DAY * ROUND(DBMS_RANDOM.VALUE(1, 365)),
+            'Descripción ' || i,
+            'Texto largo ' || i || ', lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id tincidunt nulla.'
+        );
+    END LOOP;
+    COMMIT;
+END;
+/

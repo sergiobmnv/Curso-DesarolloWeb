@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='header.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo_F_CR.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <!-- Aquí puedes añadir enlaces en el futuro -->
+        </nav>
+        <div class="buttons">
+            <button class="button-entrar" role="button" onclick="openModal('loginModal')"><i class="fa-regular fa-user"></i> ENTRAR</button>
+            <button class="button-registrate" role="button" onclick="openModal('registerModal')"><i class="fa-solid fa-key"></i> REGÍSTRATE</button>
+        </div>
+    </header>
+    
+    <div class="marque">
+        <marquee>&copy CRFLOKSY CASINO // JUEGA CON RESPONSABILIDAD +18</marquee>
+    </div>
+
+
+    <!-- Modal de Inicio de Sesión -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <img src="image.png" alt="Logo" class="modal-logo">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Usuario" /><br><br>
+            <input type="password" placeholder="Contraseña" /><br><br>
+            <button class="button-login">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <img src="image.png" alt="Logo" class="modal-logo">
+            <h2>Registro</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Usuario" required />
+                <input type="email" placeholder="Correo" required />
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" required />
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Nombre" required />
+                <input type="text" placeholder="Apellidos" required />
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="DNI" maxlength="9" required />
+                <input type="date" placeholder="Fecha de Nacimiento" required />
+            </div>
+            <button class="button-register">Registrarse</button>
+        </div>
+    </div>
+    <script src="modal.js"></script>
+</body>
+</html>

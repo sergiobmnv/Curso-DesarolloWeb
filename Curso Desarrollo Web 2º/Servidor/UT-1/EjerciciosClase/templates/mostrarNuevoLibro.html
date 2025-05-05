@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Libros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Lista de Libros</h1>
+
+        <!-- Comprobamos si hay libros en la lista -->
+        <div th:if="${libros.isEmpty()}">
+            <p>No hay libros disponibles.</p>
+        </div>
+
+        <!-- Mostramos la tabla solo si hay libros -->
+        <div th:if="${not libros.isEmpty()}">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Autor</th>
+                        <th>Titulo</th>
+                        <th>Publicado en</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Iteramos sobre la lista de libros -->
+                    <tr th:each="libro : ${libros}">
+                        <td th:text="${libro.autor}">Autor del libro</td>
+                        <td th:text="${libro.titulo}">Titulo del libro</td>
+                        <td th:text="${libro.publicadoEn}">Publicado en</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Enlace para agregar un nuevo producto -->
+        <a href="/nuevo_libro" class="btn btn-primary mt-3">Agregar Libro</a>
+    </div>
+</body>
+</html>

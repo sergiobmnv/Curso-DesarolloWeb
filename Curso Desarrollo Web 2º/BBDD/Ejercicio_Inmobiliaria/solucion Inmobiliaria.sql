@@ -1,0 +1,122 @@
+USE INMOBILIARIA;
+
+-- 2. Genera la siguiente tabla:
+
+CREATE TABLE INMOBILIARIA (
+ ID_INMOBILIARIA INT NOT NULL AUTO_INCREMENT COMMENT 'Identificador de la inmobiliaria',
+ NOMBRE VARCHAR(30) NOT NULL COMMENT 'Nombre de la inmobiliaria',
+ CIUDAD VARCHAR(100) NOT NULL COMMENT 'Ciudad donde se encuentra la inmobiliaria',
+ TELEFONO VARCHAR(15) NOT NULL COMMENT 'Telefono de la inmobiliaria',
+ CONSTRAINT PK_INMOBILIARIA PRIMARY KEY (ID_INMOBILIARIA)
+) COMMENT 'Datos de las inmobiliarias';
+
+-- 3. Realiza las siguientes modificaciones de estructura en la base de datos:
+
+ALTER TABLE AGENTE 
+MODIFY COLUMN NOMBRE VARCHAR(100) NOT NULL,
+MODIFY COLUMN EMAIL VARCHAR(100) NOT NULL,
+ADD COLUMN ID_INMOBILIARIA INT NULL COMMENT 'Inmobiliaria del agente',
+ADD CONSTRAINT FK_AGENTE_ID_INMOBILIARIA FOREIGN KEY(ID_INMOBILIARIA) REFERENCES INMOBILIARIA(ID_INMOBILIARIA);
+
+-- 4. Introduce los siguientes datos en cada tabla:
+
+INSERT INTO INMOBILIARIA (NOMBRE, CIUDAD, TELEFONO) 
+VALUES ('La Mayor','Madrid','900110220');
+INSERT INTO INMOBILIARIA (NOMBRE, CIUDAD, TELEFONO) 
+VALUES ('Doncel','Ciudad Real','926217240');
+INSERT INTO INMOBILIARIA (NOMBRE, CIUDAD, TELEFONO) 
+VALUES ('Correal','Toledo','902102020');
+INSERT INTO INMOBILIARIA (NOMBRE, CIUDAD, TELEFONO) 
+VALUES ('Cepeda','Albacete','900213040');
+INSERT INTO INMOBILIARIA (NOMBRE, CIUDAD, TELEFONO) 
+VALUES ('Concasa','Mérida','903754896');
+
+-- 5. Al Agente que es de Ciudad Real, asígnale la inmobiliaria de Ciudad Real
+
+UPDATE AGENTE 
+set ID_INMOBILIARIA = (SELECT ID_INMOBILIARIA FROM INMOBILIARIA WHERE CIUDAD='Ciudad Real')
+WHERE POBLACION='Ciudad Real';
+
+-- 6. Genera las siguientes consultas:
+
+-- a) Obtener todos los datos de los inmuebles, incluida la descripción del tipo de inmueble
+SELECT I.ID_INMUEBLE, I.DIRECCION, I.POBLACION, I.CODIGO_POSTAL, I.PRECIO_VENTA, I.PRECIO_ALQUILER, I.FECHA_ULTIMO_MOV, I.OBSERVACIONES, I.CODIGO_TIPO_INMUEBLE, 
+TI.DESCRIPCION AS DESCRIPCION_TIPO_INMUEBLE
+FROM INMUEBLE AS I, TIPO_INMUEBLE AS TI
+WHERE I.CODIGO_TIPO_INMUEBLE=TI.CODIGO_TIPO_INMUEBLE;
+
+-- b) Obtener el DNI, NOMBRE, APELLIDOS de los Agentes, así como la DESCRIPCIÓN del horario de cada Agente.
+SELECT A.DNI, A.NOMBRE, A.APELLIDOS, H.DESCRIPCION AS HORARIO
+FROM AGENTE AS A, HORARIO AS H
+WHERE A.HORARIO_CODIGO = H.CODIGO;
+    
+-- c) Lista las comisiones obtenidas por cada Agente, devuelve DNI, NOMBRE, TELEFONO, SALARIO BASE de los Agentes, así como el IMPORTE y FECHA_CALCULO de cada comisión de los Agentes.
+SELECT A.DNI, A.NOMBRE, A.TELEFONO, A.SALARIO_BASE, C.IMPORTE, C.FECHA_CALCULO
+FROM AGENTE AS A, COMISION AS C 
+WHERE A.DNI = C.AGENTE_DNI;
+
+-- d) Devuelve el ID_MOVIMIENTO, FECHA_MOVIMIENTO, PRECIO, ID_INMUEBLE, de todos los movimientos del Agente cuyo DNI es 05784218V, incluida la DIRECCION y POBLACION del Inmueble del movimiento, y DESCRIPCION del 
+-- Tipo de Inmueble, DESCRIPCION del Tipo de Movimiento, DNI y NOMBRE y APELLIDOS del Cliente, así como DNI, NOMBRE y APELLIDOS del Agente correspondiente.
+SELECT M.ID_MOVIMIENTO, M.FECHA_MOVIMIENTO, M.PRECIO, M.ID_INMUEBLE,
+I.POBLACION, I.DIRECCION,
+TI.DESCRIPCION AS DESCRIPCION_TIPO_INMUEBLE,
+TM.DESCRIPCION AS DESCRIPCION_TIPO_MOVIMIENTO,
+C.DNI, C.NOMBRE, C.APELLIDOS,
+A.DNI, A.NOMBRE, A.APELLIDOS
+FROM MOVIMIENTO M, INMUEBLE I, TIPO_INMUEBLE TI, TIPO_MOVIMIENTO TM, CLIENTE C, AGENTE A
+WHERE M.AGENTE_DNI = '05784218V' 
+AND M.ID_INMUEBLE = I.ID_INMUEBLE
+AND I.CODIGO_TIPO_INMUEBLE = TI.CODIGO_TIPO_INMUEBLE
+AND M.CODIGO_TIPO_MOVIMIENTO = TM.CODIGO_TIPO_MOVIMIENTO
+AND M.CLIENTE_DNI = C.DNI
+AND M.AGENTE_DNI = A.DNI;
+
+-- e) Obtener toda la información de los inmuebles cuyo estado tenga por descripción ‘Venta’.
+SELECT I.*
+FROM INMUEBLE I, INMUEBLE_ESTADO AS IE, ESTADO AS E 
+WHERE E.DESCRIPCION = 'Venta'
+AND I.ID_INMUEBLE = IE.ID_INMUEBLE 
+AND IE.CODIGO_ESTADO = E.CODIGO_ESTADO;
+
+-- f) Obtener todos los datos de los agentes cuyo salario base está entre 1200 y 3100.
+SELECT *
+FROM AGENTE 
+WHERE SALARIO_BASE BETWEEN 1200 AND 3100;
+
+-- g) Obtener el ID_MOVIMIENTO, FECHA_MOVIMIENTO, PRECIO del Cliente con número de teléfono 926213040, siempre que sean movimientos realizados en el año 2020.
+SELECT M.ID_MOVIMIENTO, M.FECHA_MOVIMIENTO, M.PRECIO 
+FROM MOVIMIENTO AS M, CLIENTE AS C 
+WHERE M.CLIENTE_DNI = C.DNI
+AND C.TELEFONO = '926213040' AND YEAR(M.FECHA_MOVIMIENTO) = 2020;
+
+-- h) Aplicar una subida del 15% al precio de venta de los inmuebles de tipo TI0002. 
+UPDATE INMUEBLE 
+SET PRECIO_VENTA = PRECIO_VENTA + (PRECIO_VENTA*0.15)
+WHERE CODIGO_TIPO_INMUEBLE = 'TI0002';
+
+-- i) Borra los datos de aquellas inmobiliarias que no tengan inmuebles registrados.
+DELETE FROM INMOBILIARIA 
+WHERE ID_INMOBILIARIA NOT IN (SELECT ID_INMOBILIARIA FROM INMUEBLE);
+
+-- j) Devuelve el número de comisiones obtenidas por cada Agente en función del DNI del Agente.
+SELECT AGENTE_DNI, COUNT(*) AS NUMERO_COMISIONES
+FROM COMISION 
+GROUP BY AGENTE_DNI;
+
+-- k) Devuelve el IMPORTE de la comisión más grande obtenida por aquellos Agentes con más de 2 comisiones. De los Agentes, solo es necesario devolver el DNI del Agente.
+SELECT AGENTE_DNI, MAX(IMPORTE) AS COMISION_MAX, COUNT(*)
+FROM COMISION 
+GROUP BY AGENTE_DNI
+HAVING COUNT(*) >= 2;
+
+-- l) Obtener el precio medio de venta de todos los inmuebles sobre los que se hayan realizado algún movimiento.
+SELECT AVG(I.PRECIO_VENTA) AS PRECIO_MEDIO
+FROM INMUEBLE AS I, MOVIMIENTO AS M 
+WHERE I.ID_INMUEBLE = M.ID_INMUEBLE;
+
+-- m) Obtener ID_COMISION, IMPORTE, FECHA CALCULO, DNI AGENTE de las comisiones, ordenados de mayor a menor por el IMPORTE de la comisión.
+SELECT ID_COMISION, IMPORTE, FECHA_CALCULO, AGENTE_DNI
+FROM COMISION
+ORDER BY IMPORTE DESC;
+
+

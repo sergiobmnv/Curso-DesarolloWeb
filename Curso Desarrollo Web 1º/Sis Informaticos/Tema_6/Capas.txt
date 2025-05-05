@@ -1,0 +1,40 @@
+
+
+_____________________________________________________
+	CAPA 1: FISICO.
+_____________________________________________________
+	CAPA 2: Enlace.
+_____________________________________________________
+	CAPA 3: RED (ETHERNET).
+_____________________________________________________
+	CAPA 4: Transporte.
+	
+	
+_____________________________________________________
+	CAPA 5: Sesión. (Datos con los que nos enfrentamos).
+	
+			·Comunicacion entre hosts.
+			·Mantener una sesion: Transferir datos, Restablecer la concexion, Acuse de recibo.
+			·Terminar una sesion: Finaliza la sesion despues de que se realiza la transferencia o cuando se desconecta.
+			
+			·Ejemplos de Protocolos: H.323 --> Se utiliza para configurar y mantener la concexion.
+									NetBIOS --> Se utiliza para compartir archivos a traves de la Red.
+									
+_____________________________________________________
+	CAPA 6: Presentación.  (Datos con los que nos enfrentamos).
+			
+			·Formateo y encriptacion de datos.
+			·Formateo de datos: los datos seran formateados por la computadora.
+			·ASCCI:
+					Garantiza que los datos sean legibles. 
+					Proporciona una estructura de datos. 
+					Negocia la sintaxis de transferencia de datos para la capa de aplicacion.
+					
+			·Cifrado: Se utuliza para codificar los datos en transito para mantenerlos privados.
+			·Algoritmo de cifrado: SSL/TLS.
+	
+_____________________________________________________
+	CAPA 7: Aplicación (DNS).  (Datos con los que nos enfrentamos).
+	
+	
+	

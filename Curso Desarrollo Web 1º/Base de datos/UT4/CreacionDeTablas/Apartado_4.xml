@@ -1,0 +1,23 @@
+
+
+
+
+			SELECT LENGTH ('ESTO ES UNA CADENA')FROM DUAL;
+
+			SELECT CONCAT ('ESTO', ' FORMA UNA CADENA') FROM DUAL;
+
+			SELECT RTRIM ('MYSQL    ') FROM DUAL;
+
+			SELECT LTRIM ('   MYSQL') FROM DUAL;
+
+			SELECT LOWER ('Base de datos relacionales') FROM DUAL;
+
+			SELECT UPPER ('Base de datos relacionales') FROM DUAL;
+
+			SELECT INSTR ('PEPE PEREZ', 'PE',1,2) FROM DUAL;
+
+			SELECT REPLACE ('Acces es un buen SGBD', 'Acces', 'Oracle') FROM DUAL;
+
+			SELECT SUBSTRING ('MySQL es un buen SGBD', 7) FROM DUAL;
+
+			SELECT SUBSTRING ('MySQL es un buen SGBD', 7, 2) FROM DUAL;

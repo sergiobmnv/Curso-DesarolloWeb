@@ -1,0 +1,76 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="cv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="apodo"/>
+				<xs:element name="direcciones">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="direccion" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="calle" type="xs:string"/>
+										<xs:element name="numero" type="xs:integer"/>
+										<xs:element name="ciudad" type="xs:string"/>
+										<xs:element name="escalera" minOccurs="0"/>
+									</xs:sequence>
+									<xs:attribute name="numero" type="xs:integer"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="telefono" type="xs:integer"/>
+				<xs:element name="estudios">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titulo">
+								<xs:element name="nombre" type="xs:string"/>
+								<xs:element name="centro">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="tipo" type="xs:string" use="required"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="tipoTitulo" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="email" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="idiomas" type="xs:string">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="idioma">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="nivel" use="optional" default="B1">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="A1"/>
+														<xs:enumeration value="A2"/>
+														<xs:enumeration value="B1"/>
+														<xs:enumeration value="B2"/>
+														<xs:enumeration value="C1"/>
+														<xs:enumeration value="C2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+
+
+-Name: sirve para identificar el elemento y tambien para nombrar al elemento.
+
+-Date: fecha, y sale el campo ya formateado, con la fecha y selector de fecha.
+
+-Size: sirve para renderizar el espacio concreto del formato.
+
+-Number: Cuando pones el raton en el cuadro te sale una flecha para que puedas poner un numero.(solo pone numeros).
+
+-Checkbox: Pinta un seleccionable en el que se marca con el tick o se desmarca.(Este campo siempre tiene que tener un VALUE).
+
+-Radio: Sirve para elegir un elemento que tu das con un circulo.(El NAME tiene que llamarse igual en todos los marcadores.
+
+-File: Se forma un rectangulo pata tu poder enviar o subir archivos de tu portatil.
+
+-fieldset: (form delante del fieldset) Mete un cuadro largo, el cual con un label y un input puedes hacer que el usuario inserte su nombre etc.
+
+-Select: Sale una flecha hacia abajo para pintar una lista de seleccionados. 
+(Con el value del option).
+(Con el label hace referencia a que pintar osea que es igual).
+(Con el size puedes asignar las posivilidades que puedes seleccionar).

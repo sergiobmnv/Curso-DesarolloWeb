@@ -1,0 +1,49 @@
+**PHP**
+
+-Nombre.php
+
+-Estructura de codigo: 
+<?php 
+
+	$nombre; (Este valor no esta asignado).			|>Recoger Variables.	
+	$apellidos;										|>Recoger Variables.
+	$nombre="Rober"; (Este valor es asignado).		|>Recoger Variables.
+	
+	$nombre=$_GET['nombre'];		|>Recoger Datos.
+	$apellido=$_GET['apellido'];	|>Recoger Datos.
+	
+	<form method="xxx" (El xxx puede ser Post y Get). [HTML].
+					 
+	__________ <?php 
+						echo "<h1>DATOS FORMULARIO</h1>";				|>Mostrar Resultados
+						echo "<ul>";									|>Mostrar Resultados
+							echo "<li> nombre:".$nombre."</li>";		|>Mostrar Resultados
+							echo "<li> apellido:".$apellido."</li>";	|>Mostrar Resultados
+						echo "</ul>";									|>Mostrar Resultados
+?>					
+						
+						<form method="GET" action="procesar.php">       |>Enviar el resultado al html (es decir cuando le das a cuadro de enviar se manda el listado) 
+
+
+-Declaraciones de variables: Se utiliza el $nombrevariable; 
+	(No exiten tipos de variables).
+ 	ej: $nombre="Sergio";
+	ej: $edad= 22; (Numero entero).
+	ej: $salario=1200.57;
+
+	(Vector).
+	ej $_GET[]; Vamos a acceder al formulario de tipo get o post, y vamos a ver sus atributos. (ejemplo) $usuario = $_GET['usuario'];
+	ej $_POST[]; Para ocultar contraseñas etc.
+
+-Concatenar valores: (Es el + de java).
+
+	String nombre = "Rober";
+	SUP ("hola" + nombre);
+      -----------------------------
+	$nombre="Rober";
+	echo "hola".$nombre;
+	
+	
+	Para que un formulario este bien escrito se requiere el <form> y la etiqueta bien formada con el  <input nombre ="nombre">
+	
+	Una vez acabado bien el formulario se requiere ponerlo en modo Post.

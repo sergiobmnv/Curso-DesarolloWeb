@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: rgba(218, 58, 218, 0.133);
+    font-family: Arial, Verdana;
+
+}
+
+.contenedor {
+
+    width: 1000px;
+    background: rgb(231, 105, 220);
+    
+}
+
+header {
+
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+main {
+
+    width: 700px;
+    padding: 30px;
+    background: rgb(121, 110, 217);
+    
+}
+
+aside {
+
+    width: 300px;
+    background: rgb(218, 165, 32);
+    padding: 20px;
+    
+}
+
+footer {
+
+    padding: 20px;
+    background: navy;
+   
+}

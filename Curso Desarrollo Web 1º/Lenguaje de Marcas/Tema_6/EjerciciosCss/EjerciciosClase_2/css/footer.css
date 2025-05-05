@@ -1,0 +1,19 @@
+footer {
+    margin-top: 20px;
+    background: rgba(115, 111, 111, 0.399);
+    padding: 20px;
+    width: 100%;
+    color: rgb(22, 76, 124);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .redes-sociales a {
+    color: rgb(9, 87, 90);
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+footer .redes-sociales a:hover {
+    text-decoration: none;
+}

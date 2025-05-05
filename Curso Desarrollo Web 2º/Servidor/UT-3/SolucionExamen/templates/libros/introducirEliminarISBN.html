@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar ISBN para Eliminar Libros</title>
+</head>
+<body>
+    <h1>Eliminar Libros por ISBN</h1>
+
+    <form th:action="@{/eliminarLibroISBN}" method="get">
+        <div>
+            <label for="isbn">Ingrese el ISBN:</label>
+            <input type="text" id="isbn" name="isbn" required>
+        </div>
+        <div>
+            <button type="submit">Buscar Libros</button>
+        </div>
+    </form>
+
+	<a href="/" class="btn btn-primary mt-3">Pagina Principal</a>
+	<a href="/nuevoLibro" class="btn btn-primary mt-3">Añadir nuevo libro</a>
+    <a href="/ingresarISBNeditar" class="btn btn-primary mt-3">Modificar libro</a>
+</body>
+</html>

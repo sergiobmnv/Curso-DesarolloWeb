@@ -1,0 +1,305 @@
+CREATE TABLE FABRICANTE (
+	ID_FABRICANTE NUMBER NOT NULL,       
+	NOMBRE VARCHAR2(30) NOT NULL,       
+	CIUDAD VARCHAR2(100) NOT NULL,      
+	CONSTRAINT PK_FABRICANTE PRIMARY KEY (ID_FABRICANTE) 
+);
+
+COMMENT ON TABLE FABRICANTE IS 'Datos de los fabricantes';
+COMMENT ON COLUMN FABRICANTE.ID_FABRICANTE IS 'Identificador del Fabricante';
+COMMENT ON COLUMN FABRICANTE.NOMBRE IS 'Nombre del fabricante';
+COMMENT ON COLUMN FABRICANTE.CIUDAD IS 'Nombre de la ciudad del fabricante';
+
+CREATE SEQUENCE SEC_FABRICANTE
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999
+NOCACHE
+ORDER;		
+
+CREATE TABLE ARTICULO (      
+	ID_ARTICULO  NUMBER NOT NULL,       
+	NOMBRE VARCHAR2(30),       
+	PRECIO NUMBER,       
+	ID_FABRICANTE NUMBER,      
+	CONSTRAINT PK_ARTICULO PRIMARY KEY (ID_ARTICULO),      
+	CONSTRAINT FK_ARTICULO_FABRICANTE  FOREIGN KEY (ID_FABRICANTE) REFERENCES FABRICANTE(ID_FABRICANTE) 
+);
+
+COMMENT ON TABLE ARTICULO IS 'Datos de los articulos de los distintos fabricantes';
+COMMENT ON COLUMN ARTICULO.ID_ARTICULO IS 'Identificador del Articulo';
+COMMENT ON COLUMN ARTICULO.NOMBRE IS 'Nombre del artículo';
+COMMENT ON COLUMN ARTICULO.PRECIO IS 'Precio del artículo';
+COMMENT ON COLUMN ARTICULO.ID_FABRICANTE IS 'Identificador del Fabricante';
+
+CREATE SEQUENCE SEC_ARTICULO
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999
+NOCACHE
+ORDER;
+
+
+/*INSERT PARA LA TABLA FABRICANTE*/
+INSERT INTO FABRICANTE(ID_FABRICANTE, NOMBRE, CIUDAD)  VALUES(SEC_FABRICANTE.NEXTVAL, 'Kingston','Leon');
+INSERT INTO FABRICANTE(ID_FABRICANTE, NOMBRE, CIUDAD)  VALUES(SEC_FABRICANTE.NEXTVAL, 'Adata', 'Madrid');
+INSERT INTO FABRICANTE(ID_FABRICANTE, NOMBRE, CIUDAD)  VALUES(SEC_FABRICANTE.NEXTVAL, 'Logitech','Toledo');
+INSERT INTO FABRICANTE(ID_FABRICANTE, NOMBRE, CIUDAD)  VALUES(SEC_FABRICANTE.NEXTVAL, 'Lexar','Zamora');
+INSERT INTO FABRICANTE(ID_FABRICANTE, NOMBRE, CIUDAD)  VALUES(SEC_FABRICANTE.NEXTVAL, 'Seagate','Valladolid');
+
+COMMIT;
+
+/*INSERT PARA LA TABLA ARTICULO*/
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Teclado', 100, 3);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Disco duro 300Gb', 500, 5);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Mouse', 80, 3);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Memoria USB', 140, 4);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Memoria RAM', 290, 1);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Disco duro extraíble 250Gb', 650, 5);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Memoria USB', 279, 1);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'DVD Rom', 450, 2);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'CD ROM', 200, 2);
+INSERT INTO ARTICULO (ID_ARTICULO, NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (SEC_ARTICULO.NEXTVAL, 'Tarjeta de red', 180, 3);
+
+COMMIT;
+
+/*Punto 8*/
+UPDATE ARTICULO
+SET NOMBRE = 'Nueva tarjeta de red'
+WHERE PRECIO = 180;
+
+COMMIT;
+
+/*Punto 9 -- SOLO SE APLICA SI LA TABLA ESTA VACIA POR ESO CREAMOS UNA TABLA DE BACKUP*/
+
+CREATE TABLE FABRICANTE_BACKUP AS SELECT * FROM FABRICANTE;
+CREATE TABLE ARTICULO_BACKUP AS SELECT * FROM ARTICULO;
+DELETE FROM ARTICULO;
+COMMIT;
+DELETE FROM FABRICANTE;
+COMMIT;
+
+ALTER TABLE FABRICANTE 
+	ADD NUM_TFNO NUMBER NOT NULL; 
+
+COMMENT ON COLUMN FABRICANTE.NUM_TFNO IS 'Numero de telefono del fabricante';
+
+INSERT INTO FABRICANTE 
+(SELECT t.ID_FABRICANTE,
+               t.NOMBRE,
+               t.CIUDAD,
+               0 -- Se pone un valor por defecto
+ FROM FABRICANTE_BACKUP t);
+COMMIT;
+
+INSERT INTO ARTICULO  
+(SELECT * FROM ARTICULO_BACKUP t);
+
+COMMIT;
+
+DROP TABLE ARTICULO_BACKUP;
+DROP TABLE FABRICANTE_BACKUP;
+
+/*Punto 10*/
+UPDATE FABRICANTE
+SET NUM_TFNO = 123456789
+WHERE CIUDAD = 'Leon';
+
+UPDATE FABRICANTE
+SET NUM_TFNO = 78946513
+WHERE CIUDAD = 'Madrid';
+
+UPDATE FABRICANTE
+SET NUM_TFNO = 741852963
+WHERE CIUDAD = 'Toledo';
+
+COMMIT;
+
+/*Punto 11*/
+UPDATE ARTICULO
+SET PRECIO = PRECIO + 120
+WHERE NOMBRE = 'Teclado';
+
+COMMIT;
+
+/*Punto 12*/
+UPDATE ARTICULO
+SET PRECIO = 0
+WHERE ID_FABRICANTE = 3;
+
+COMMIT;
+
+/*Punto 13*/
+UPDATE ARTICULO
+SET PRECIO = PRECIO - 26
+WHERE ID_FABRICANTE = 4 
+	  AND (NOMBRE = 'Memoria USB' OR NOMBRE = 'Memoria RAM');
+
+COMMIT;
+
+/*Punto 14*/
+
+-- a) Obtener todos los datos de los productos de la tienda
+SELECT *
+FROM ARTICULO;
+
+-- b) Obtener los nombres de los productos de la tienda
+SELECT NOMBRE
+FROM ARTICULO;
+
+-- c) Obtener los nombres y precio de los productos de la tienda
+SELECT NOMBRE, 
+	   PRECIO
+FROM ARTICULO;
+
+-- d) Obtener los nombres de los artículos sin repeticiones
+SELECT DISTINCT NOMBRE
+FROM ARTICULO;
+
+-- e) Obtener todos los datos del artículo cuya clave de producto es ‘5’
+SELECT * 
+FROM ARTICULO 
+WHERE ID_ARTICULO=5;
+
+-- f) Obtener todos los datos del artículo cuyo nombre del producto es 'Teclado'
+SELECT * 
+FROM ARTICULO
+WHERE NOMBRE = 'Teclado';
+
+-- g) Obtener todos los datos de la Memoria RAM y memorias USB
+SELECT * 
+FROM ARTICULO
+WHERE NOMBRE = 'Memoria RAM' OR NOMBRE = 'Memoria USB';
+
+-- h) Obtener todos los datos de los artículos que empiezan con ‘M’
+SELECT * 
+FROM ARTICULO
+WHERE Nombre LIKE 'M%';
+
+-- i) Obtener el nombre de los productos donde el precio sea 100€
+SELECT NOMBRE
+FROM ARTICULO 
+WHERE PRECIO = 100;
+
+-- j) Obtener el nombre de los productos donde el precio sea mayor a 200€
+SELECT NOMBRE
+FROM ARTICULO
+WHERE PRECIO > 200;
+
+-- K) Obtener todos los datos de los artículos cuyo precio este entre € 100 y € 350
+/*Opcion 1 con AND*/
+SELECT *
+FROM ARTICULO
+WHERE PRECIO >= 100 
+	  AND PRECIO <= 350;
+
+/*Opcion 2 con la funcion BETWEEN*/
+SELECT *
+FROM ARTICULO
+WHERE PRECIO BETWEEN 100 AND 350;
+
+-- l) Obtener el precio medio de todos los productos
+SELECT AVG(PRECIO) AS PRECIO_MEDIO
+FROM ARTICULO;
+
+-- m) Obtener el precio medio de los artículos cuyo código de fabricante sea 2
+SELECT AVG(PRECIO) AS PRECIO_MEDIO
+FROM ARTICULO 
+WHERE id_fabricante=2;
+
+-- n) Obtener el nombre y precio de los artículos ordenados por Nombre
+SELECT NOMBRE, 
+	   PRECIO
+FROM ARTICULO 
+ORDER BY Nombre;
+
+-- o) Obtener todos los datos de los productos ordenados descendentemente por Precio
+SELECT * 
+FROM ARTICULO 
+ORDER BY Precio DESC;
+
+-- p) Obtener el nombre y precio de los artículos cuyo precio sea mayor a € 250 y ordenarlos descendentemente por precio y luego ascendentemente por nombre  
+SELECT NOMBRE, 
+	   PRECIO
+FROM ARTICULO
+WHERE PRECIO > 250
+ORDER BY PRECIO DESC, NOMBRE ASC;
+
+-- q) Obtener un listado completo de los productos, incluyendo por cada artículo los datos del articulo y del nombre del fabricante
+SELECT  A.ID_ARTICULO, 
+		A.NOMBRE, 
+		A.PRECIO, 
+		A.ID_FABRICANTE, 
+		F.NOMBRE AS NOMBRE_FABRICANTE 
+FROM ARTICULO A INNER JOIN FABRICANTE F
+					  	ON A.ID_FABRICANTE = F.ID_FABRICANTE;
+
+SELECT A.ID_ARTICULO, 
+	   A.NOMBRE, 
+	   A.PRECIO, 
+	   A.ID_FABRICANTE, 
+	   F.NOMBRE AS NOMBRE_FABRICANTE 
+FROM ARTICULO A, FABRICANTE F 
+WHERE A.ID_FABRICANTE = F.ID_FABRICANTE;
+
+
+-- r) Obtener el nombre y precio de los artículos donde el fabricante sea Logitech ordenarlos alfabéticamente por nombre del producto
+SELECT A.NOMBRE, 
+	   A.PRECIO 
+FROM ARTICULO A, FABRICANTE F
+WHERE A.ID_FABRICANTE = F.ID_FABRICANTE 
+	  AND F.NOMBRE='Logitech'
+ORDER BY A.NOMBRE ASC;
+
+------------------.
+SELECT A.NOMBRE, 
+	   A.PRECIO 
+FROM ARTICULO A INNER JOIN FABRICANTE F
+					  	ON A.ID_FABRICANTE = F.ID_FABRICANTE  
+WHERE F.NOMBRE='Logitech'
+ORDER BY A.NOMBRE ASC;
+
+-- s) Obtener el nombre, precio y nombre de fabricante de los productos que son marca Lexar o Kingston ordenados descendentemente por precio
+SELECT  A.NOMBRE, 
+		A.PRECIO, 
+		F.NOMBRE AS NOMBRE_FABRICANTE 
+FROM ARTICULO A, FABRICANTE F
+WHERE A.ID_FABRICANTE = F.ID_FABRICANTE 
+	  AND F.NOMBRE IN ('Lexar','Kingston')
+ORDER BY A.PRECIO DESC;
+
+SELECT  A.NOMBRE, 
+		A.PRECIO, 
+		F.NOMBRE AS NOMBRE_FABRICANTE 
+FROM ARTICULO A INNER JOIN FABRICANTE F
+						   ON A.ID_FABRICANTE = F.ID_FABRICANTE 
+WHERE F.NOMBRE IN ('Lexar','Kingston')
+ORDER BY A.PRECIO DESC;
+
+-- t) Añade un nuevo producto: Altavoces de 120€ del fabricante 2
+INSERT INTO ARTICULO (ID_ARTICULO,NOMBRE, PRECIO, ID_FABRICANTE)  VALUES (11, 'Altavoces', 120, 2); 
+
+COMMIT;
+
+-- u) Cambia el nombre del producto 6 a ‘Impresora Laser’ 
+UPDATE ARTICULO 
+SET NOMBRE= 'Impresora Laser'
+WHERE id_articulo = 6 ;
+COMMIT;
+
+-- v) Aplicar un descuento del 10% a todos los productos
+UPDATE ARTICULO
+SET PRECIO = PRECIO *0.90;
+COMMIT;
+
+-- w) Aplicar un descuento de 10€ a todos los productos cuyo precio sea mayor o igual a 300€
+UPDATE ARTICULO 
+SET PRECIO = PRECIO - 10  
+WHERE PRECIO >= 300;
+
+COMMIT;
+
+-- x)  Borra el producto numero 6
+DELETE FROM ARTICULO WHERE id_articulo= 6;
+
+COMMIT;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona SYSTEM "Ejemplo_Externo_2.dtd">
+<persona>
+	<nombre>Elsa</nombre>
+	<mayor_de_edad/>
+	<ciudad>Pamplona</ciudad>
+</persona>

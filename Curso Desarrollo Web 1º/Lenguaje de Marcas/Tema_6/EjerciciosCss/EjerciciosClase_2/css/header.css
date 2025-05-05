@@ -1,0 +1,20 @@
+
+header {
+    width: 100%;
+    padding: 50px 0px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+

@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE hechos_historicos [
+    <!ELEMENT hecho (fecha)>
+        <!ATTLIST hecho descripcion CDATA #REQUIRED>
+    <!ELEMENT fecha (dia,mes,año)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT año (#PCDATA)>
+
+]>

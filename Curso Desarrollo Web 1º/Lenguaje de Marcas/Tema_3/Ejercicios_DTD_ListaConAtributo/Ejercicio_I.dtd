@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+
+<!DOCTYPE hechos_historicos [
+    <!ELEMENT hechos_historicos (hecho)*>
+    <!ELEMENT hecho (fecha)>
+        <!ATTLIST hecho descripcion #IMPLIED>
+    <!ELEMENT fecha (dia, mes, anio)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>

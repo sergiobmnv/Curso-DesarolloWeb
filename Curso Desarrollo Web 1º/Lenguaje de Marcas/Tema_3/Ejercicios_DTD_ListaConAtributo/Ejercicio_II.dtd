@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE tickets [
+    <!ELEMENT tickets (ticket)*>
+    <!ELEMENT ticket (fecha, hora, precio,forma_de_pago)>
+        <!ATTLIST ticket codigo_del_ticket CDATA #REQUIRED>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT precio (precio_sin_IVA, precio_con_IVA)>
+    <!ELEMENT precio_sin_IVA (#PCDATA)>
+    <!ELEMENT precio_con_IVA (#PCDATA)>
+    <!ELEMENT forma_de_pago (con_tarjeta | efectivo)>
+    <!ELEMENT con_tarjeta (cantidad, numero_de_tarjeta, nombre_del_propietario)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT numero_de_tarjeta (#PCDATA)>
+    <!ELEMENT nombre_del_propietario (#PCDATA)>
+    <!ELEMENT efectivo (cantidad)>
+]>

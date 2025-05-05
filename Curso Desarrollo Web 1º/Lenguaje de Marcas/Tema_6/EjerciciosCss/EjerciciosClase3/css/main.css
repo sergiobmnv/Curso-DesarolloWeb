@@ -1,0 +1,30 @@
+
+
+.main {
+    background: white;
+    width: 700px;
+    float: left;
+}
+
+.main .imagen {
+    width: 100%;
+}
+
+.main .imagen img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.main .posts {
+    padding: 40px;
+}
+
+.main .posts h2 {
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.main .posts article p{
+    margin-bottom: 15px; /* Separacion entre elementos en bloque*/
+    line-height: 27px;
+}

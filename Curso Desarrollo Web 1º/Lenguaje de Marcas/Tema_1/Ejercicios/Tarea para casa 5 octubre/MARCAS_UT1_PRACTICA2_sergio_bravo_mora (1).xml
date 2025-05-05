@@ -1,0 +1,26 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+<compra>
+<ticket codigo="0483t">
+		<fecha>06/10/2022</fecha>
+		<hora>17:40</hora>
+		<precio>
+			<precio>sin IVA 75€</precio>
+			<precio>con IVA 75€</precio>
+		</precio>
+		<forma_de_pago>
+			<con_tarjeta>
+				<cantidad>74€</cantidad>
+				<numero targeta="757357283"/>
+				<nombre tarjeta="Antonio Jimenez Roncero"/>
+			</con_tarjeta>	
+		</forma_de_pago>
+</ticket>
+	<codigo del_ticket="0484t"/>
+		<fecha>06/10/2022</fecha>
+		<hora>15:45</hora>
+		<precio>
+			<precio sin_IVA="21€"/>
+			<precio con_IVA="25€"/>
+		</precio>
+		<forma_de_pago efectivo="25€"/>
+</compra>

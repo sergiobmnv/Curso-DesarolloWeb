@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name = "cartelera">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name = "cartelera" maxOccurs = "unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="titulo" type="xs:string"/>
+							<xs:element name="titulo_original" type="xs:string"/>
+							<xs:element name="director" type="xs:string"/>
+							<xs:element name="interpretes" type="xs:string"/>
+							<xs:element name="sinopsis" type="xs:string"/>
+							<xs:element name="url" type="xs:string"/>
+							<xs:element name="clasificacion" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

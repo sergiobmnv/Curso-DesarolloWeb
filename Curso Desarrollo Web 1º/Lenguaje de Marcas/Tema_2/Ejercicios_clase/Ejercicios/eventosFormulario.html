@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Evento formularios</title>
+</head>
+<body>
+	<h1>Evento formularios</h1>
+	<label for="nombre">Nombre - onblur</label>
+	<input type="text" name="nombre" id="nombre" onblur="alert('Salir del campo');"> <br />
+	<label for="apellido1">Apellido 1 - onfocus (sin activar)</label>
+	<input type="text" name="apellido1" id="apellido1" onfocus="este evento se produce cuando se marca un campo"> <br />
+	<label for="apellido2">Apellido 2 - seleccionamos el valor</label>
+	<input type="text" name="apellido2" id="apellido2" onselect="alert('Subrayamos el texto');"> <br />
+	<label for="poblacion">Población - cambiar valor</label>
+	<select name="poblacion" onchange="alert('cambio de valor');">
+		<option value="" label="--- Sin selección ---"/>
+		<option value="1" label="Valor 1"/>
+		<option value="2" label="Valor 2"/>	
+	</select>
+
+	<form onsubmit="alert('Mando valores');" method="post" onreset="alert('Borramos');">
+		<input type="submit" value="Evento onSubmit"/>
+		<button type="reset">Evento Reset</button>
+	</form>
+	
+</body>
+</html>

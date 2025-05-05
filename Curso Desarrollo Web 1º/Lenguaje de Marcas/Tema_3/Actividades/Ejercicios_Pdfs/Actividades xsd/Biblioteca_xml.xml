@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<BIBLIOTECA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
+	
+	
+<BIBLIOTECA>
+	<Libro>
+		<Titulo>Hola</Titulo>
+		<Autor>Jimenez</Autor>
+		<ISBN>6464646B</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Adios</Titulo>
+		<Autor>Bravo</Autor>
+		<ISBN>6464645A</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Hi</Titulo>
+		<Autor>Mora</Autor>
+		<ISBN>6464644L</ISBN>
+	</Libro>
+</BIBLIOTECA>

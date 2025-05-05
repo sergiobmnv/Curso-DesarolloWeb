@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE company [
+	<!ELEMENT company (departament)+>
+		<!ATTLIST company industry CDATA #REQUIRED>
+	<!ELEMENT departament (employee)+>
+		<!ATTLIST departament id #CDATA #REQUIRED>
+		<!ATTLIST departament name #CDATA #IMPLIED>
+	<!ELEMENT employee (name,age,position)>
+		<!ATTLIST employee id CDATA #REQUIRED>
+		<!ATTLIST employee type (fulltime | parttime) "fulltime">
+	<!ELEMENT name (PCDATA)>
+	<!ELEMENT age (PCDATA)>
+	<!ELEMENT position (#PCDATA)>
+	
+]>
+
+
+<company>
+
+<departament id ="101" name ="Engineering">
+
+	<employee id ="E101" type ="fulltime">
+		<name>John</name>
+		<age>35</age>
+		<position>Sofware Engineeer</position>
+	</employee>
+	<employee id ="E102" type ="parttime">
+		<name>Jane Smith</name>
+		<age>28</age>
+		<position>QA Analyst</position>
+	</employee>
+</departament>
+
+<departament id ="102" name ="Marketing">
+	<employee id ="E103" type ="fulltime">
+		<name>Michael Johnson</name>
+		<age>40</age>
+		<position>Marketing Manager</position>
+	</employee>
+</departament>
+
+</company>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>validaciones</title>
+</head>
+<body>
+	<h1>Ejemplo validaciones</h1>
+
+	required --> debe informarse
+	<input type="text" name="nombre" required> <br />
+
+	<hr />
+	minlength --> longitud minima a insertar
+	<input type="text" name="nombre" minlength="3"> <br />
+
+	<hr />
+	maxlength --> longitud maxima que permite escribir en el componente
+	<input type="text" name="nombre"> <br />
+
+	<hr />
+	disbled --> deshabilita en elemento
+	<input type="text" name="nombre" disabled="disabled" value="deshabilitado"> <br />
+
+	<hr />
+	readonly --> campo de solo lectura
+	<input type="text" name="nombre" readonly ="true" value="solo lectura"> <br />
+
+	<hr />
+	pattern --> campos que debe cumplir una expresión regular
+	<input type="text" name="nombre" pattern="^[0-9]*"> <br />
+
+	<hr />
+	checked
+	<input type="checkbox" name="mayorEdad" value="N" checked> <br />
+
+
+</body>
+</html>

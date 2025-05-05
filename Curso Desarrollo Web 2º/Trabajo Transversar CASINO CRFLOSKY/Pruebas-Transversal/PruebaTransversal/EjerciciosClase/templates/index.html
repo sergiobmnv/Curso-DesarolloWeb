@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="submitForm()">Iniciar sesión</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var formData = {
+                username: username,
+                password: password
+            };
+
+            // Realizar una solicitud AJAX a servidor.php usando jQuery
+            $.ajax({
+                type: "POST",
+                url: "/usuarios/registrar",
+                contentType: "application/json",
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    console.log("Respuesta del servidor:", response);
+                },
+                error: function(error) {
+                    console.error("Error en la solicitud AJAX:", error);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

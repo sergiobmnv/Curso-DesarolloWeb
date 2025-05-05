@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+
+<company industry="Technology" xmlns:xsi ="http://www.w3.org/2001/XMLSchema" 
+	xsi:noNamespaceSchemaLocation = "Ejercicio_Entrenamiento.xsd">
+
+<departament id ="101" name ="Engineering">
+
+		<employee id ="E101" type ="fulltime">
+			<name>John</name>
+			<age>35</age>
+			<position>Sofware Engineeer</position>
+		</employee>
+		<employee id ="E102" type ="parttime">
+			<name>Jane Smith</name>
+			<age>28</age>
+			<position>QA Analyst</position>
+		</employee>
+	</departament>
+
+	<departament id ="102" name ="Marketing">
+		<employee id ="E103" type ="fulltime">
+			<name>Michael Johnson</name>
+			<age>40</age>
+			<position>Marketing Manager</position>
+		</employee>
+	</departament>
+
+</company>

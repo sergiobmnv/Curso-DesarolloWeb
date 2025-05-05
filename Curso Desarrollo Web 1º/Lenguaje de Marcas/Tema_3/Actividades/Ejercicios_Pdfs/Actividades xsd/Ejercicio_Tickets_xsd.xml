@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="Ejercicio_Tickets_xsd.xsd">
+
+<tickets>
+    <ticket Codigo_del_ticket="0483t">
+        <Fecha>06/10/2022</Fecha>
+        <Hora>17:40</Hora>
+        <Precio>
+            <Precio_sin_IVA>71 euros</Precio_sin_IVA>
+            <Precio_con_IVA>74 euros</Precio_con_IVA>
+        </Precio>
+        <Forma_de_pago>
+            <Con_tarjeta>
+                <Cantidad>74 euros</Cantidad>
+                <Numero_de_tarjeta>757357283</Numero_de_tarjeta>
+                <Nombre_del_propietario_de_la_tarjeta>Antonio Jiménez Roncero</Nombre_del_propietario_de_la_tarjeta>
+            </Con_tarjeta>
+        </Forma_de_pago>
+    </ticket>
+    <ticket Codigo_del_ticket="0484t">
+        <Fecha>06/10/2022</Fecha>
+        <Hora>17:45</Hora>
+        <Precio>
+            <Precio_sin_IVA>21 euros</Precio_sin_IVA>
+            <Precio_con_IVA>25 euros</Precio_con_IVA>
+        </Precio>
+        <Forma_de_pago>
+            <Efectivo>
+                <Cantidad>25 euros</Cantidad>
+            </Efectivo>
+        </Forma_de_pago>
+    </ticket>
+</tickets>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+	<head>
+			<Title> Formulario </Title>
+			<Meta charset="UTF-8">
+	</head>
+	
+	<body bgcolor ="pink">
+			<h1 style="text-align:center"> Formulario </h1>
+			
+			<form  style="width:600px; margin:auto;" action="Formulario.php" method="GET">
+				<div>
+					<fieldset>
+						<legend> Datos Personales </legend>
+							<label for="Nombre">Nombre:</label>
+							<input type="text" name="Nombre" id="Nombre">
+							
+							<label for="Apellido">Apellido:</label>
+							<input type="text" name="Apellido" id="Apellido">
+							
+							<label for="Semestre">Semestre:</label>
+							<select name="Semestre" id="Semestre">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+							</select>
+							<label for="Carrera">Carrera:&nbsp</label>
+								<select name="Carrera" id="Carrera">
+									<option>Diseño</option>
+									<option>Ingenieria</option>
+									<option>Derecho</option>
+								</select>
+							<label for="Hombre">Hombre:</label>
+							<input type="radio" name="Sexo" id="Hombre" value="Hombre" checked>
+							<label for="Mujer">Mujer:</label>
+							<input type="radio" name="Sexo" value="Mujer" id="Mujer">
+					</fieldset>
+				</div>
+				
+				<div>
+					<fieldset>
+						<legend> Fecha de nacimiento </legend>
+						<label for="Fecha">Fecha:&nbsp</label>
+						<input type="date" name="Fecha" id="Fecha">
+					</fieldset>
+				</div>
+				
+				<div>
+					<fieldset>
+						<legend> Intereses </legend>
+						<label for="Leer">Leer:</label><input type="checkbox" name="Leer" value="Leer" id="Leer">
+						<label for="Cine">Cine:</label><input type="checkbox" name="Cine" value="Cine" id="Cine">
+						<label for="Videojuegos">Videojuegos:</label><input type="checkbox" name="Videojuegos" value="Videojuegos" id="Videojuegos">
+						<label for="Deportes">Deporte:</label><input type="checkbox" name="Deportes" value="Deportes" id="Deportes">
+						<label for="Moda">Moda:</label><input type="checkbox" name="Moda" id="Moda" value="Moda" checked>
+						<label for="Fotografía">Fotografía:</label><input type="checkbox" name="Fotografía" value="Fotografía" id="Fotografía" checked>	
+					</fieldset>
+				</div>
+				
+				<div>
+					<fieldset>
+						<legend> Contacto </legend>
+						<label for="Correo">Correo Electronico:</label><input type="email" name="Correo" id="Correo"> 
+						<label for="Contraseña">Contraseña:</label><input type="password" name="Contraseña" id="Contraseña"> 	
+					</fieldset>	
+				</div>
+				
+				<div>
+					<fieldset>
+						<legend> Mensaje </legend>
+						<label for="Fichero">Foto:</label><input type="File" name="Fichero"  id="Fichero">
+						<br />
+						<button type="submit">Enviar</button>
+						<button type="reset">Restablecer</button>
+					</fieldset>
+				</div>
+			</form>
+		</body>
+</html>

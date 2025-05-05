@@ -1,0 +1,199 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #333333);
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    min-height: calc(100vh - 120px); /* Resta la altura del footer si es necesario */
+    padding-bottom: 40px; /* Asegura que haya espacio debajo del contenido */
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to left, #ffffff, #dbe9e9, #b7d4d3, #93bebd, #6ea9a8, #469594, #008080);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    position: relative;
+}
+
+
+/* Logo */
+.logo img {
+    height: 150px;
+    max-height: 100%;
+}
+
+/* Texto en movimiento */
+.marque {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+marquee {
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #DAA520; /* Dorado */
+}
+
+/* Sección de juegos */
+.juegos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    position: relative; /* Asegura que el efecto solo afecte dentro */
+}
+
+/* Tarjetas de los juegos */
+.juego {
+    width: 320px;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    position: relative;
+}
+
+/* Brillo dorado cuando se pasa el cursor */
+.juego:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: blur(0px);
+    box-shadow: 0 0 15px #DAA520, 0 0 25px #DAA520, 0 0 35px #DAA520;
+    border-color: #DAA520;
+}
+
+/* Difuminado solo cuando un juego tiene hover */
+.juego:hover ~ .juego,
+.juego:not(:hover):has(+ .juego:hover),
+.juego:not(:hover):has(~ .juego:hover) {
+    filter: blur(5px);
+    opacity: 0.5;
+    pointer-events: none; /* Evita que se active fuera de los juegos */
+}
+
+/* Imágenes de los juegos */
+.juego img {
+    width: 258px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Títulos de los juegos */
+.juego h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #DAA520;
+    font-weight: bold;
+}
+
+/* Quitar el subrayado de los enlaces en los títulos de los juegos */
+.juego a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Hereda el color del texto (color del título) */
+}
+
+
+/*Footer*/
+.footer {
+    background-color: #007b7b; /* Color verde oscuro */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px; /* Espacio antes del footer */
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajuste entre secciones */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección general dentro del footer */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo */
+.footer-logo {
+    width: 150px;
+}
+
+/* Estilo del copyright */
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Iconos de redes sociales */
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumento de tamaño al pasar el cursor */
+}
+
+/* Servicios */
+.services-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.services-section a:hover {
+    color: goldenrod; /* Color dorado cuando se pasa el cursor */
+}
+
+/* Contacto */
+.contact-section p {
+    margin: 5px 0;
+}
+
+h3 {
+    color: goldenrod;
+    text-decoration: underline;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.copyright:hover {
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.correo a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.correo a:hover {
+    text-decoration: underline;
+}

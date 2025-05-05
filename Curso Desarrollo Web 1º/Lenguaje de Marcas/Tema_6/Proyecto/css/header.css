@@ -1,0 +1,42 @@
+
+header {
+
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    height: 600px;
+    
+}
+
+header .enlaces nav{
+
+   text-align: right;
+   padding-top: 50px;
+   margin-right: 200px;
+
+}
+
+header .enlaces nav a {
+
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+header .titulo, #cafe{
+
+    margin-left: 100px;
+    padding-top: 100px;
+}
+header #cafe p{
+
+    margin-left: 100px;
+}
+
+#cafe, .Lorem {
+    color: white;
+}
+
+b {
+    font-family: monospace;
+}

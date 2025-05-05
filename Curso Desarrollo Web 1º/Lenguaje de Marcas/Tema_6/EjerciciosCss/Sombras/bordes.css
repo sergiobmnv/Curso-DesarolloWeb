@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    background: rgb(198, 107, 17);
+    display: 20px;
+    margin: 20px;
+}
+
+.uno {
+    border: 5px solid;
+}
+
+.dos {
+    border: 5px dotted red;
+    border-radius: 40px;
+}
+
+.tres {
+    border: 5px dashed green;
+    border-radius: 100px;
+}
+
+.cuatro {
+    border: 5px double blueviolet;
+}
+
+.cinco {
+    border: 5px groove yellowgreen;
+}
+
+.seis {
+    border: 5px ridge aquamarine;
+}
+
+.siete {
+    border: 5px inset green;
+}

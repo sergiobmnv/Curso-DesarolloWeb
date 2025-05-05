@@ -1,0 +1,6 @@
+<!ELEMENT Menu (Plato)*>
+<!ELEMENT Plato (Nombre, Precio_en_euros, Descripción, Calorias)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Precio_en_euros (#PCDATA)>
+<!ELEMENT Descripción (#PCDATA)>
+<!ELEMENT Calorias (#PCDATA)>

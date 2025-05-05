@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<etiqueta nacimiento="199-10-20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="Ejercicio_Etiqueta.xsd">
+	
+	<color tonalidad="claro">Rojo</color>
+	<color tonalidad="oscuro">Azul</color>
+	<color tonalidad="medio">Verde</color>
+	
+</etiqueta>

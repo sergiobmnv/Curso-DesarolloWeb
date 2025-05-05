@@ -1,0 +1,18 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+<Mensaje>
+	<Remite>
+		<Nombre>Sergio</Nombre>
+		<Email>sergiobmnh@gmail.com</Email>
+	</Remite>	
+	<Destinatario lugar="Residencia">
+		<Nombre>Roberto</Nombre>
+		<Email>robertojfhd@gmail.com</Email>
+	</Destinatario>
+	<Asunto>Tema de contrato</Asunto>
+	<Texto>
+		<Parrafo>Le quiero comunicar que su contrato nos ha gustado</Parrafo>
+		<Parrafo>Es un buen ejemplar</Parrafo>
+		<Parrafo>Nos gustaria que estuvieras en nuestra empresa</Parrafo>
+		<Parrafo>Contacta con nsootros lo antes posible</Parrafo>
+	</Texto>
+</Mensaje>

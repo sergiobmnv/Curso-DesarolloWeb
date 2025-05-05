@@ -1,0 +1,23 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+
+<Emisor_del_pedido nombre="Sergio Bravo Mora">
+	<carta>
+		<Mensaje>Me veo capacitado para estar dentro</Mensaje>
+		<receptor_del_mensaje>Maria sanchez</receptor_del_mensaje>
+		<mensaje>
+			<saludo>Querida Maria</saludo>
+			<introduccion>
+				Lorem ipsum...
+			</introduccion>
+			<cuerpo>
+				Lorem ipsum...
+			</cuerpo>
+			<desenlace>
+				Lorem ipsum...
+			</desenlace>
+			<despedida>
+				con cariño sergio
+			</despedida>
+		</mensaje>
+	</carta>		
+</Emisor_del_pedido>

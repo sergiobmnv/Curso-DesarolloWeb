@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tablas</title>
+</head>
+<body>
+	<h1>Ejemplo de tablas</h1>
+
+	Tabla sin encabezado y sin borde -->
+	<table>
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td>Celda 4</td>
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla sin encabezado y con borde -->
+	<table border="1">
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td>Celda 4</td>
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con encabezado y con borde -->
+	<table border="1">
+		<tr>
+			<th>Columna 1</th>
+			<th>Columna 2</th>
+			<th>Columna 3</th>
+		</tr>
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td>Celda 4</td>
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con encabezado y con borde especificación de secciones thead, tbody y tfoot-->
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Columna 1</th>
+				<th>Columna 2</th>
+				<th>Columna 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+				<td>Celda 3</td>
+			</tr>
+			<tr>
+				<td>Celda 4</td>
+				<td>Celda 5</td>
+				<td>Celda 6</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Total</th>
+				<th colspan="2">Valor total</th>
+			</tr>
+		</tfoot>
+	</table>
+
+
+	<hr />
+	Fila de una tabla con color
+	<table border="1">
+		<tr bgcolor="lime">
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td>Celda 4</td>
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+	</table>
+
+	<hr />
+	Columna de una celda con color
+	<table border="1">
+		<tr>
+			<td bgcolor="blue">Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td>Celda 4</td>
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+	</table>
+
+
+	<hr />
+	Tabla normal con un caption de tabla <br /> <br />
+	<!-- Tabla con colores en filas y columnas con border-->
+	<table border="1">
+		<caption>Este es el caption de la tabla</caption>
+		<thead>
+			<tr>
+				<th>col1</th>
+				<th>col2</th>
+				<th>col3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>x</td>
+				<td>y</td>
+				<td>z</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr />
+	Tabla con fila espandida a varias columnas (se usa el atributo rowspan)
+	<table border="1">
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td colspan="3">Celda 4</td>
+		</tr>
+		<tr>
+			<td>Celda 7</td>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con columna espandida a varias filas (se usa el atributo colspan)
+	<table border="1">
+		<tr>
+			<td rowspan="3">Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+		<tr>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con fila espandida a varias columnas (se usa el atributo rowspan) y texto alineado horizontalmente izquierda (valor por defecto)
+	<table border="1">
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left">Celda 4</td>
+		</tr>
+		<tr>
+			<td>Celda 7</td>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con fila espandida a varias columnas (se usa el atributo rowspan) y texto alineado horizontalmente al centro
+	<table border="1">
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">Celda 4</td>
+		</tr>
+		<tr>
+			<td>Celda 7</td>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con fila espandida a varias columnas (se usa el atributo rowspan) y texto alineado horizontalmente a la derecha
+	<table border="1">
+		<tr>
+			<td>Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="right">Celda 4</td>
+		</tr>
+		<tr>
+			<td>Celda 7</td>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con columna espandida a varias filas (se usa el atributo colspan) y alineado vertical arriba
+	<table border="1">
+		<tr>
+			<td rowspan="3" valign="top">Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+		<tr>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con columna espandida a varias filas (se usa el atributo colspan) y alineado vertical medio (valor por defecto)
+	<table border="1">
+		<tr>
+			<td rowspan="3" valign="middle">Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+		<tr>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	Tabla con columna espandida a varias filas (se usa el atributo colspan) y alineado vertical abajo
+	<table border="1">
+		<tr>
+			<td rowspan="3" valign="bottom">Celda 1</td>
+			<td>Celda 2</td>
+			<td>Celda 3</td>
+		</tr>
+		<tr>
+			
+			<td>Celda 5</td>
+			<td>Celda 6</td>
+		</tr>
+		<tr>
+			<td>Celda 8</td>
+			<td>Celda 9</td>
+		</tr>
+	</table>
+
+	<hr />
+	<!-- 
+		
+		El elemento colgroup representa a un grupo de una o más columnas de una tabla (table). Este elemento puede también proveer atributos comunes a las columnas que representa de la misma forma en que lo hace el elemento col.
+
+		Para especificar el número de columnas consecutivas que serán agrupadas por este elemento, los autores pueden usar uno de dos métodos (pero no ambos): declarando el atributo span con el número de columas agrupadas como valor o agregando uno o más elementos col como hijos. Cualquiera sea el método elegido, el conteo de columnas va de izquierda a derecha, de modo que para tener un elemento colgroup que represente a la tercera columna de una tabla, se debe primero representar con otro elemento colgroup a las dos primeras.
+
+	-->
+	Tabla con colgroup
+	<table class="default" border="1">
+		<colgroup span="3"></colgroup>
+		<colgroup>
+			<col>
+			<col span="2" style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+		</colgroup>
+
+  		<tr>
+			<th>Ciudad</th>
+			<th>Lengua</th>
+			<th>Moneda</th>
+			<th>Área</th>
+			<th>Población</th>
+	    	<th>Densidad</th>
+  		</tr>
+  		<tr>
+    		<td>Londres</td>
+    		<td>Inglés</td>
+    		<td>GBP</td>
+    		<td>1,572.00 km<sup>2</sup></td>
+    		<td>8,416,535</td>
+    		<td>5,354/km<sup>2</sup></td>
+ 		</tr>
+
+  		<tr>
+    		<td>Washington</td>
+    		<td>Inglés</td>
+    		<td>USD</td>
+    		<td>177.0 km<sup>2</sup></td>
+    		<td>646,449</td>
+    		<td>4,066/km<sup>2</sup></td>
+  		</tr>
+
+  		<tr>
+    		<td>Moscú</td>
+    		<td>Ruso</td>
+    		<td>RUB</td>
+    		<td>2,511 km<sup>2</sup></td>
+    		<td>11,503,501</td>
+    		<td>4,581.24/km<sup>2</sup></td>
+  		</tr>
+
+	</table>
+
+	<hr />
+	Tabla con imagenes
+	<table border="1">
+		<tr>
+			<td><img src="ironman.jpeg" width="150px" height="150px"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><img src="ironman.jpeg" width="150px" height="150px"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td><img src="ironman.jpeg" width="150px" height="150px"></td>
+		</tr>
+	</table>
+</body>
+</html>

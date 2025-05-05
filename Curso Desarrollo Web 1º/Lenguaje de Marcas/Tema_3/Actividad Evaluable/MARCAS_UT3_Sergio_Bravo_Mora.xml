@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE cv [
+	<!ELEMENT cv (nombre, apodo, direcciones, telefono, email*, idiomas)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apodo EMPTY>
+	<!ELEMENT telefono(#PCDATA)>
+	<!ELEMENT direcciones (direccion+)>
+	<!ELEMENT direccion (calle, numero, ciudad)>
+		<!ATTLIST direccion numero  CDATA "Desconocida">
+	<!ELEMENT calle (#PCDATA)>
+	<!ELEMENT numero (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>
+	<!ELEMENT idiomas (idioma+)>
+	<!ELEMENT idioma (#PCDATA)>
+		<!ATTLIST idioma nivel (A1|A2|B1|B2|C1|C2) "A1">
+	
+]>
+
+<cv>
+    <nombre>Steve Jobs</nombre>
+    <apodo/>
+    <direcciones> 
+        <direccion numero="1">
+            <calle>770 de Welch Rd., Ste</calle>
+            <numero>154</numero>
+            <ciudad>Palo Alto</ciudad>
+        </direccion>
+        <direccion numero="2">
+            <calle>Desengaño</calle>
+            <numero>21</numero>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+    </direcciones>
+    <telefono>685097256</telefono>
+    <email>stevijobs@gmail.com</email>
+    <email>eljefedeapple@gmail.com</email>
+    <idiomas>
+        <idioma>Japones</idioma>
+        <idioma nivel="A2">Español</idioma>
+        <idioma nivel="B2">Alemán</idioma>
+        <idioma nivel="C2">Inglés</idioma>
+    </idiomas>
+</cv>
+

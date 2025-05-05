@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="tickets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ticket" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Fecha" type="xs:date"/>
+							<xs:element name="Hora" type="xs:time"/>
+							<xs:element name="Precio">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Precio_sin_IVA" type="xs:double"/>
+										<xs:element name="Precio_con_IVA" type="xs:double"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Forma_de_pago">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="Con_tarjeta">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="cantidad" type="xs:string"/>
+													<xs:element name="numero_de_tarjeta" type="xs:integer"/>
+													<xs:element name="Nombre_de_propietario_de_la_tarjeta" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>			
+										</xs:element>
+										<xs:element name="Efectivo">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="cantidad" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>	
+								</xs:complexType>
+							</xs:element>	
+						</xs:sequence>
+						<xs:attribute name="Codigo_de_ticket" type="xs:string"/>
+					</xs:complexType>	
+				</xs:element>	
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Menu SYSTEM "Ejercicio4DTD.dtd">
+<Menu>
+	<Plato>
+		<Nombre>Plato 1</Nombre>
+		<Precio_en_euros>10€</Precio_en_euros>
+		<Descripción>Descripcción 1</Descripción>
+		<Calorias>100</Calorias>
+	</Plato>
+	<Plato>
+		<Nombre>Plato 2</Nombre>
+		<Precio_en_euros>20€</Precio_en_euros>
+		<Descripción>Descripcción 2</Descripción>
+		<Calorias>200</Calorias>
+	</Plato>
+	<Plato>
+		<Nombre>Plato 3</Nombre>
+		<Precio_en_euros>30€</Precio_en_euros>
+		<Descripción>Descripcción 3</Descripción>
+		<Calorias>300</Calorias>
+	</Plato>
+	<Plato>
+		<Nombre>Plato 4</Nombre>
+		<Precio_en_euros>40€</Precio_en_euros>
+		<Descripción>Descripcción 4</Descripción>
+		<Calorias>400</Calorias>
+	</Plato>
+</Menu>

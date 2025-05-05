@@ -1,0 +1,37 @@
+
+			------Inserción de registros------
+
+
+CREATE TABLE USUARIOS (
+    DNI VARCHAR2 (10),
+    NOMBRE VARCHAR2 (10),
+    APELLIDOS VARCHAR2 (20),
+    EMAIL VARCHAR2 (60),
+    CIUDAD VARCHAR2 (20),
+    FECHA_NACIMIENTO DATE,
+    DESCUENTO NUMBER,
+    FECHA_ALTA DATE,
+    CONSTRAINT PK_USUARIOS PRIMARY KEY (DNI)
+);
+
+	------ Opción 1 ------ (Esta es mas util).
+
+INSERT INTO USUARIOS (DNI, NOMBRE, APELLIDOS, EMAIL, CIUDAD, FECHA_NACIMIENTO, DESCUENTO, FECHA_ALTA)
+VALUES ('123', 'Sergio', 'Bravo Mora', 'Bravo@gmail', 'Ciudad Real', '01/01/2002', 0.5, '26/01/2024');
+
+
+COMMIT;
+
+	------ Opción 2 ------
+
+INSERT INTO USUARIOS VALUES ('123A', 'Sergio', 'Bravo Mora', 'Bravo@gmail', 'Ciudad Real', '01/01/2002', 0.5, '26/01/2024');
+COMMIT;
+
+
+	------ Ejecutarlo Todo De Golpe ------
+	
+INSERT INTO DEPARTAMENTO (ID_DEPARTAMENTO, DESCRIPCION)
+	VALUES ('1', 'Informatica');
+INSERT INTO EMPLEADO (DNI, DESCRIPCION, ID_DEPARTAMENTO)
+	VALUES ('123', 'Empleado 1', 1);
+	COMMIT;

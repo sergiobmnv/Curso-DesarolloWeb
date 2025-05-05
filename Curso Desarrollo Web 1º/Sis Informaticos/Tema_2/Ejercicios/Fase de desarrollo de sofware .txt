@@ -1,0 +1,5 @@
+-Posición de esta fase, ¿de dónde venimos? ¿cuál es la siguiente? Venimos de la fase de pruebas y posteriormente Iremos a la fase de mantenieminto. 
+-¿qué información recojo?, ¿qué información proporciono a la siguiente fase? En la etapa de Explotación se ejecutara dicho programa o se dara por finalizado para que en la siguiente fase que seria la de mantenimiento ayudemos a futuros programadores a enterder dicho programa.
+-¿Qué personas o roles de una empresa de software están involucrados en esta fase? Ingeniero de validacion y verificacion y el administrador de la configuracion y por ultimo el cliente.  
+-¿Qué se pretende en esta fase?-¿Qué pasa si se descubre un error en esta fase? Se pretende corregir fallos despues de la entrega al cliente para mejorar el rendimiento o adaptar el producto a un entorno modificado.
+-¿Con qué tipo de código se trabaja? Como codigo en si se podria usar MYSQL O SQL server para el tema de documentación.

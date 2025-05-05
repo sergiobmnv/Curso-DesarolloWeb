@@ -1,0 +1,129 @@
+*Que son los lenguajes de marcas?: Es un lenguaje etiquetado o marcado que se combinan en: 
+informacion que esta entre marcas (generalmente de caracter textual) y en marcas relativas a la estructura y forma de representar el texto.
+
+(ejemplo) <saludo>hola k ase<saludo>  ;sin el <saludo> se puede interpretar como que esta vacilando o algo.
+
+Los lenguajes de marcas se escriben en un texto plano y no en un texto enriquecido (word), estos archivos planos son editables en otras aplicaciones como notepad++.
+son portables (da igual el sistema operativo). 
+facilita la interoperabilidad *(podemos utilizarlos en cualquier parte del mundo respetando el encoding, es decir el lenguaje simbolos etc.).
+son flexibles,(varios lenguajes en un unico archivo).
+
+
+*Clasificacion de lengujaes de marcas: 
+
+-De presentacio: como ha de presentarse el documento, las etiquetas estan ocultas para el usuario. (Ejemplo de herramienta): PEJ (indicando que una palabra debe presentarse en negrita, microsoft word
+
+-De procedimiento: Enfocado hacia la presentacion del texto, son visibles para el usuario. (Ejemplo de herramienta): PE (se quiere formatear un titulo, HTML, LaTeX.
+
+-Descriptivo/Semanticó: Usan etiquetas para describir los fragmentos del texto, no especifican como debe presentarse o en que orden. (Ejemplo de herramienta): XML
+
+
+
+*Que es XML?: Es un meta lenguaje que sirve para crear nuestro propio lenguaje de programación.
+
+Consta de tres ambitos: 
+			-Intercambio de datos.
+			-Almacenamiento de información.	
+			-Web semántica.
+
+Objetivos de XML: 
+			-internacionalizacion.
+			-uso en internet.
+			-compatible con SGML.
+			-Separa informacion de su presentación.
+			-Extensible (se pueden añadir mas cosas).
+
+XML esta diseñado para almacenar datos, transportar datos.
+
+XML permite independizar el contenido (informaciñon) de un documento XML de su representacion (visual);  es decir, en un documento XML.
+
+
+
+*Etiquetas, reglas de formacion de etiquetas: La sintaxis para el marcado XML es muy similar a las de HTML, *<h1 align= "right" > Esto es un encabezado principal</h1>*
+
+
+
+*Reglas de formacion de los identificaciones de los Tags:
+
+1-Los identificadores del Tag con Key Sensitive.
+
+2-Siempre empiezan a escribirse despues del simbolo de apertura: "<".
+
+3-Solamente pueden contener letras o numeros, y los siguientes símbolos: "_" ":" "," "."
+
+4-Los Tags deben tener el mismo nombre en la apertura y en el cierre.
+
+5-Los Tags se abren y cierran en orden (primero se cierra el ultimo que se abrió).
+
+6-Existen los Tags no duales (tambien llamado vacios o simples).
+
+
+*XML-DATA es un contenedor que contiene cadenas de caracteres, entidades especiales, secciones CDATA u otros elementos.
+
+*CDATA se utiliza para poner un bloque de texto que contiene caracteres y que no deben ser leidos por el parser de XML.
+
+
+
+*Estructura de un documento XML:
+
+					<pxml version ="1.0"  encoding = "utf.8"?> 	(Prólogo) Que es la declaración.
+					<banco>					  	(cuerpo) Es todo lo que forma la estructura del arbol.
+						>color< rojo</color>			(cuerpo)	
+						<hueco>3</hueco>			(cuerpo)
+					<banco>						(cuerpo)
+
+
+*Elementos TRIBUTOS DE LOS ELEMENTOS: Dentro de nuestro XML vamos a encontrar varios elementos (Elemento vacio, Elemento no vacio)
+
+*Los atributos proporcionan metainformacion sobre un elemento en un documento XML concreto. Tambien proporcionan informacion adicional sobre un elemento.
+
+
+*XML bien formado, se dice cuando cumple unas especificaciones en concreto:
+
+1-EL DOCUMENTO DEBE TENER UN ELEMENTO RAIZ.
+2-
+3-
+4-
+5-
+6-
+7-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

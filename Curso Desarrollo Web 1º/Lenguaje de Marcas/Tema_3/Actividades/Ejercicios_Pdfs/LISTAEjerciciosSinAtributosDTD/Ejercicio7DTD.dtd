@@ -1,0 +1,4 @@
+<!ELEMENT fechas (fecha)*>
+<!ELEMENT fecha (dia, mes)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>

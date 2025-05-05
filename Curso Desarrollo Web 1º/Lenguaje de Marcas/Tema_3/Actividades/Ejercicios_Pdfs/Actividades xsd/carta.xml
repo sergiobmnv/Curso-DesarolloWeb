@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<carta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="carta.xsd">
+
+<carta>
+	<emisor_del_pedido> Roberto Sánchez </emisor_del_pedido>
+	<receptor_del_pedido> María Sñanchez </receptor_del_pedido>
+	<mensaje>
+		<saludo> Querida María </saludo>
+		<introduccion> Lorem Ipsum </introduccion>
+		<cuerpo> Lorem Ipsum </cuerpo>
+		<desenlace> Lorem Ipsum </desenlace>
+		<despedida> Lorem Ipsum </despedida>
+	</mensaje>
+</carta>
+
+
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name = "carta">
+		<xs:complexType>
+			<xs:sequence>
+				
+			</xs:sequence>
+		</xs:complexType>
+
+</xs:schema>
+
+

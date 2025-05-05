@@ -1,0 +1,37 @@
+Numeros de inodos: ls -i
+
+Archivos que empiezen con un . : ls -a
+
+Mostrar Archivos: dir
+
+Crear Carpetas: mkdir
+
+Crear Varios directorios de golpe --> mkdir -p nivel1/nivel2/nivel3/nivel4
+
+Borrar todo lo que hay dentro de ese directorio ---> rm -r
+
+chmod 777 --> para dar todos los permisos.
+
+tail --> pone las 10 ultimas lineas de un txt.
+
+head --> te muestra las 10 primeras lineas de un txt.
+
+head -3 --> te muestra las 3 primeras lineas de un txt.
+
+tail -3 archivo.txt > file.txt  --> sobreescribe.
+
+tail -3 archivo.txt >> file.txt  --> añade.
+
+mkdir -p EFA_MORATALAZ/{DAM,DAW}/{UNO,DOS,TRES}  ---> para crearlo todo junto.
+
+ls | wc ---> Lineas, Palabras y Bytes.
+
+ls -lia | grep (nombre) ---> para marcar el nombre que le asignas
+
+
+
+
+
+
+
+

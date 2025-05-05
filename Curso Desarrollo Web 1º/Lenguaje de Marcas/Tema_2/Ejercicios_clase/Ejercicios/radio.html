@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Radio</title>
+</head>
+<body>
+	<h1>Ejemplo de radio</h1>
+	
+	<!-- 
+		Para el radio funcione como tal (solo se marque una opción de todas las posible) el atributo name debe tener el mismo valor,
+		sino tiene el mismo valor funciona como radios distintos
+
+	-->
+	<h4>Mismo radio (función real)</h4>
+    <input type="radio" name="empleoactual" value="tiempocompleto"> Tiempo completo<br>
+
+    <input type="radio" name="empleoactual" value="mediodia"> Medio día<br>
+
+    <input type="radio" name="empleoactual" value="sinempleo"> Sin empleo
+
+    <hr />
+    <h4>Distintos radios (comportamiento como checkbox)</h4>
+    <input type="radio" name="empleo1" value="tiempocompleto"> Tiempo completo<br>
+
+    <input type="radio" name="empleo2" value="mediodia"> Medio día<br>
+
+    <input type="radio" name="empleo3" value="sinempleo"> Sin empleo
+
+</body>
+</html>

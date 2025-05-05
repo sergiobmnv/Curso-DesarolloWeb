@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Devolver Libro</title>
+</head>
+<body>
+    <h1>Devolver Libro</h1>
+
+    <form th:action="@{/devolverLibro}" method="post">
+        <label for="dniUsuario">DNI del Usuario:</label>
+        <input type="text" id="dniUsuario" name="dniUsuario" required>
+
+        <label for="isbnLibro">ISBN del Libro:</label>
+        <input type="text" id="isbnLibro" name="isbnLibro" required>
+
+        <button type="submit">Devolver Libro</button>
+    </form>
+
+    <a th:href="@{/}">Volver a la página principal</a>
+</body>
+</html>

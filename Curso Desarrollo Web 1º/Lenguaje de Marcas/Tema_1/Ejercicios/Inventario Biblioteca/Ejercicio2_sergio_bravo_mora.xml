@@ -1,0 +1,23 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+
+<BIBLIOTECA>
+	<Libro>
+		<Titulo>
+			<primer titulo="Don Quijote de la Mancha"/>
+			<Autor>Miguel de Cervantes</Autor>
+			<ISBN>9780936388878</ISBN>
+			<segundo titulo="Viaje al fin de la noche"/>
+			<Autor>Louis-Ferdinand Cèline</Autor>
+			<ISBN>9788435018968</ISBN>
+			<tercer titulo="El Valle de los Lobos"/>
+			<Autor>Laura Gallego García</Autor>
+			<ISBN>9788467539677</ISBN>
+			<cuarto titulo="Harry Potter y la Piedra Filosofal"/>
+			<Autor>J.K. Rowling</Autor>
+			<ISBN>8478884459</ISBN>
+			<quito titulo="Juego de Tronos: Canción de hielo y fuego1"/>
+			<Autor>George R. R. Martin</Autor>
+			<ISBN>8496208915</ISBN>
+		</Titulo>
+	</Libro>
+</BIBLIOTECA>	

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario GET</title>
+</head>
+<body>
+	<h1>Ejemplo de formulario POST</h1>
+	<!-- 
+		Formulario de tipo get se puede especificar en el atributo method, sino se pone este atributo el valor por defecto es GET, sino podemos asignarle el valor POST.
+
+		Para poder mandar los datos que el usuario inserta en el formulario, los tipos input deben tener el atributo "name" y este debe estar dentro de la etiqueta form
+
+		Significado de los atributos:
+
+		method: Indica el tipo de envio de los elementos del formulario
+		action: Indica que fichero trata los datos insertados en el formulario
+		name: Nombre del formulario
+		enctype: Indicamos el tipo mime cuando queremos mandar un fichero en el formulario este valor es combinado cuando el method es POST y el tipo mime indicado en enctype es multipart/form-data
+	
+				TODOS LOS ELEMENTOS QUE PERMITEN INSERTAR INFORMACIÓN DEBEN TENER EL ATRIBUTO NAME, LOS ELEMENTOS QUE MUESTRAN INFORMACIÓN NO PERMITEN EL ATRIBUTO NAME 
+	-->
+	Formulario ordenado con div <br /> <br />
+	<form method="POST">
+
+		<div>
+			<!-- Label sirve para mostrar una etiqueta y el atributo for sirve para que si pulsamos en el label, se selecciones el input-->			
+			<label for="nombre">Nombre:</label>
+			<input type="text" name="nombre" id="nombre">
+		</div>
+
+		<div>
+			<!-- Label sirve para mostrar una etiqueta y el atributo for sirve para que si pulsamos en el label, se selecciones el input-->
+			<label for="apellido1">Apellido 1:</label>
+			<input type="text" name="apellido1" id="apellido1">
+		</div>
+
+		<div>
+			<label for="apellido2">Apellido 2:</label>
+			<input type="text" name="apellido2" id="apellido2">
+		</div>
+		<div>
+			<label>La tortilla: </label>
+			<input type="radio" name="tortilla" id="cebolla">
+			<label for="cebolla">con cebolla</label>
+			<input type="radio" name="tortilla" id="sincebolla">
+			<label for="sincebolla">sin cebolla</label>
+		</div>
+		<div>
+			<input type="checkbox" name="mayorEdad" id="mayorEdad" value="S">
+			<label for="mayorEdad">Soy mayor de edad</label>
+			<input type="checkbox" name="publicidad" id="publicidad"> <!-- sino ponemos value se marca on cuando seleccionamos-->
+			<label for="publicidad">Admito publicidad</label>
+			<input type="checkbox" name="recordarPasswd" id="recordarPasswd" value="S">
+			<label for="recordarPasswd">Quiero recordar la passwd</label>
+		</div>
+		<div>
+			<label for="mensaje">Mensaje:</label>
+			<textarea name="mensaje" id="mensaje" cols="10" rows="20"></textarea>
+		</div>
+		<br />
+		<div>
+			<button type="submit">Mandar</button>
+			<button type="reset">Borrar</button>
+		</div>
+	</form>
+</body>
+</html>

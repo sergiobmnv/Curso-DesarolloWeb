@@ -1,0 +1,40 @@
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+
+    background: #f2f2f2;
+    font-family: Arial;
+}
+
+.cajaPadre {
+
+    background: #2e294a;
+    width: 700px;
+    overflow: hidden; /* Otra propiedad para arreglar el metodo flotante y es mas adecuado */
+}
+
+.caja {
+
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 38px;
+    background: rgb(234, 55, 19);
+    margin: 20px;
+}
+
+.uno {
+    float: left;
+}
+
+.dos {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BIBLIOTECA [
+	<!ELEMENT BIBLIOTECA (Libro)*>
+	<!ELEMENT Libro (Titulo, Autor, ISBN)>
+	<!ELEMENT Titulo (#PCDATA)>
+	<!ELEMENT Autor (#PCDATA)>
+	<!ELEMENT ISBN (#PCDATA)>
+]>
+<BIBLIOTECA>
+	<Libro>
+		<Titulo>Titulo 1</Titulo>
+		<Autor>Autor 1</Autor>
+		<ISBN>ISBN 1</ISBN>
+	</Libro>
+
+	<Libro>
+		<Titulo>Titulo 2</Titulo>
+		<Autor>Autor 2</Autor>
+		<ISBN>ISBN 2</ISBN>
+	</Libro>
+
+	<Libro>
+		<Titulo>Titulo 3</Titulo>
+		<Autor>Autor 3</Autor>
+		<ISBN>ISBN 3</ISBN>
+	</Libro>
+
+	<Libro>
+		<Titulo>Titulo 4</Titulo>
+		<Autor>Autor 4</Autor>
+		<ISBN>ISBN 4</ISBN>
+	</Libro>
+
+	<Libro>
+		<Titulo>Titulo 5</Titulo>
+		<Autor>Autor 5</Autor>
+		<ISBN>ISBN 5</ISBN>
+	</Libro>
+</BIBLIOTECA>

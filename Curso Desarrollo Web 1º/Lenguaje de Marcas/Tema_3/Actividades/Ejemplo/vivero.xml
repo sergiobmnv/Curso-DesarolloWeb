@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivero xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vivero.xsd">
+
+	<especie siembra="2018">
+		<nombre> Lilchi </nombre>
+		<precio moneda="euro">25</precio>
+		<variedad> variedad 1 </variedad>
+		<origen> Filipinas </origen>
+		<color_fruto> Rojo </color_fruto>
+		<color_fruto> Rosa </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Diario </riego>
+		</otros_datos>
+		<fecha/>
+	</especie>
+	<especie siembra="2017">
+		<nombre> Longan </nombre>
+		<precio moneda="Libra">15</precio>
+		<variedad> variedad 2 </variedad>
+		<origen> China </origen>
+		<color_fruto> Marron </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Diario </riego>
+			<horario> Nocturno </horario>
+		</otros_datos>
+		<fecha/>
+	</especie>
+	<especie siembra="2016">
+		<nombre> Algodon </nombre>
+		<precio> 21 </precio>
+		<variedad> variedad 3 </variedad>
+		<origen> Florida </origen>
+		<color_fruto> Blanco </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Cada 15 dias </riego>
+		</otros_datos>
+		<fecha/>
+	</especie>
+</vivero>

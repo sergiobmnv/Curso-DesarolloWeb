@@ -1,0 +1,23 @@
+? --> 0-1
+* --> 0-N
++ --> 1-N
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cv [
+	<!ELEMENT cv (nombre, apodo, direcciones, telefono, email*, idiomas)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apodo EMPTY>
+	<!ELEMENT direcciones (direccion+)>
+	<!ELEMENT direccion (calle, numero, ciudad)>
+		<!ATTLIST direccion numero CDATA "Desconocida">
+	<!ELEMENT calle (#PCDATA)>
+	<!ELEMENT numero (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT telefono (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>
+	<!ELEMENT idiomas (idioma+)>
+	<!ELEMENT idioma (#PCDATA)>
+		<!ATTLIST idioma nivel (A1 | A2 | B1 | B2 | C1| C2) "A1">
+	
+]>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hechos_historicos [
+	<!ELEMENT hechos_historicos (hecho)*>
+	<!ELEMENT hecho (fecha)>
+		<!ATTLIST hecho descripcion CDATA #IMPLIED>
+	<!ELEMENT fecha (dia, mes, año)>
+	<!ELEMENT dia (#PCDATA)>
+	<!ELEMENT mes (#PCDATA)>
+	<!ELEMENT año (#PCDATA)>	
+]>
+<hechos_historicos>
+	<hecho descripcion = "descripcion1">
+		<fecha>
+			<dia>12</dia>
+			<mes>8</mes>
+			<año>1981</año>
+		</fecha>
+	</hecho>
+	<hecho descripcion = "descripcion2">
+		<fecha>
+			<dia>4</dia>
+			<mes>9</mes>
+			<año>1998</año>
+		</fecha>
+	</hecho>
+	<hecho descripcion = "descripcion3">
+		<fecha>
+			<dia>4</dia>
+			<mes>2</mes>
+			<año>2004</año>
+		</fecha>
+	</hecho>
+</hechos_historicos>

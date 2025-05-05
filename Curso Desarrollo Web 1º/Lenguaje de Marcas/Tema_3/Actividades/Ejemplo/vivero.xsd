@@ -1,0 +1,41 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema">
+	<xs:element name ="vivero">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="especie" maxOccurs="3">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nombre" type="xs:string"></xs:element>
+							<xs:element name="precio">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extesion name="xs:integer">
+											<xs:element name="moneda" type="xs:integer" use="optional"/>
+										</xs:extesion>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="variedad" type="xs:string"/>
+							<xs:element name="origen" type="xs:string"/>
+							<xs:element name="color_fruto" type="xs:string" maxOccurs="2"/>
+							<xs:element name="otros_datos">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="maduracion" type="xs:string"/>
+										<xs:element name="riego" type="xs:string"/>
+										<xs:element name="horario" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="fecha" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="siembra" type="xs:integer"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

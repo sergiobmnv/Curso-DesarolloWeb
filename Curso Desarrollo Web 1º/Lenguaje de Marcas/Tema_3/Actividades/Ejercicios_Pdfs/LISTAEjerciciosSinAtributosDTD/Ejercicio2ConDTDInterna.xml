@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catelera [
+	<!ELEMENT catelera (peliculas)>
+	<!ELEMENT peliculas (pelicula)*>
+	<!ELEMENT pelicula (titulo, Titulo_orginal, Director, Interpretes, Siponsis, url, clasificacion)>
+	<!ELEMENT titulo (#PCDATA)>
+	<!ELEMENT Titulo_orginal (#PCDATA)>
+	<!ELEMENT Director (#PCDATA)>
+	<!ELEMENT Interpretes (#PCDATA)>
+	<!ELEMENT Siponsis (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT clasificacion (#PCDATA)>
+]>
+<catelera>
+	<peliculas>
+		<pelicula>
+			<titulo>Titulo 1</titulo>
+			<Titulo_orginal>Titulo original </Titulo_orginal>
+			<Director>Director 1</Director>
+			<Interpretes>Interpretes 1</Interpretes>
+			<Siponsis>Sinopsis 1</Siponsis>
+			<url>URL 1</url>
+			<clasificacion>Clasificacion 1</clasificacion>
+		</pelicula>
+		<pelicula>
+			<titulo>Titulo 2</titulo>
+			<Titulo_orginal>Titulo original 2</Titulo_orginal>
+			<Director>Director 2</Director>
+			<Interpretes>Interpretes 2</Interpretes>
+			<Siponsis>Sinopsis 2</Siponsis>
+			<url>URL 2</url>
+			<clasificacion>Clasificacion 2</clasificacion>
+		</pelicula>
+
+		<pelicula>
+			<titulo>Titulo 3</titulo>
+			<Titulo_orginal>Titulo original 3</Titulo_orginal>
+			<Director>Director 3</Director>
+			<Interpretes>Interpretes 3</Interpretes>
+			<Siponsis>Sinopsis 3</Siponsis>
+			<url>URL 3</url>
+			<clasificacion>Clasificacion 1</clasificacion>
+		</pelicula>
+	</peliculas>
+</catelera>

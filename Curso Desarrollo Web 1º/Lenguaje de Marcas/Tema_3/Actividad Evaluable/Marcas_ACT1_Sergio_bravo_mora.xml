@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE vivero [
+	<!ELEMENT vivero (especie*, nombre, precio, variedad, origen, color_fruto+, otros_datos, fecha)>
+		<!ATTLIST especio siembra CDATA #IMPLIED>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT precio (#PCDATA)>
+		<!ATTLIST precio moneda CDATA "Euro">
+	<!ELEMENT variedad (#PCDATA)>
+	<!ELEMENT origen (#PCDATA)>
+	<!ELEMENT color_fruto (#PCDATA)>
+	<!ELEMENT otros_datos (maduracion, riego, horario?)>
+	<!ELEMENT maduracion (#PCDATA)>
+	<!ELEMENT riego (#PCDATA)>
+	<!ELEMENT horario (#PCDATA)>
+	<!ELEMENT fecha EMPTY>
+	
+
+]>
+
+<vivero>
+	<especie siembra="2018">
+		<nombre> Lilchi </nombre>
+		<precio moneda="euro">25</precio>
+		<variedad> variedad 1 </variedad>
+		<origen> Filipinas </origen>
+		<color_fruto> Rojo </color_fruto>
+		<color_fruto> Rosa </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Diario </riego>
+		</otros_datos>
+		</fecha>
+	</especie>
+	<especie siembra="2017">
+		<nombre> Longan </nombre>
+		<precio moneda="Libra">15</precio>
+		<variedad> variedad 2 </variedad>
+		<origen> China </origen>
+		<color_fruto> Marron </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Diario </riego>
+			<horario> Nocturno </horario>
+		</otros_datos>
+		</fecha>
+	</especie>
+	<especie siembra="2016">
+		<nombre> Algodon </nombre>
+		<precio> 21 </precio>
+		<variedad> variedad 3 </variedad>
+		<origen> Florida </origen>
+		<color_fruto> Blanco </color_fruto>
+		<otros_datos>
+			<maduracion> Agosto </maduracion>
+			<riego> Cada 15 dias </riego>
+		</otros_datos>
+		</fecha>
+	</especie>
+</vivero>

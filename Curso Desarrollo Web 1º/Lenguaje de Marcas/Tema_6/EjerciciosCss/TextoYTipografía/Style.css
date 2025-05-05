@@ -1,0 +1,42 @@
+
+/* Tipografía */
+
+body {
+
+    font-family: Arial, Verdana;
+    background-color: #6a040f;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(50, 189, 31);
+    text-align: center;
+}
+
+h2 {
+
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+h3 {
+
+    font-weight: bold;
+    text-decoration: underline
+    
+}
+
+p {
+
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+
+/* Colores */
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(40, 4, 30, .7);
+}

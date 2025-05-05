@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE alumno[
+	<!ELEMENT alumno (nombre,dni,apellidos,pais)>  
+	<!ELEMENT nombre (#PCDATA)>  
+	<!ELEMENT dni (#PCDATA)>  
+	<!ELEMENT apellidos (#PCDATA)>  
+	<!ELEMENT pais (#PCDATA)> 
+]>   
+<alumno>  
+	<nombre>"María"</nombre>  
+	<dni>75485215E</dni>  
+	<apellidos>Jimenez</apellidos>  
+	<pais> </pais> 
+</alumno> 

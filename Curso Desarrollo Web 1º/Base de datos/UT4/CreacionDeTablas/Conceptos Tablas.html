@@ -1,0 +1,161 @@
+
+	//Crear Sesion En Oracle:
+
+		ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+		CREATE USER nombre IDENTIFIED BY passwd;
+			GRANT nombre TO nombre;
+			
+			
+	//Borrar Usuarios:
+	
+		ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+		DROP USER sergio CASCADE;
+__________________________________________________________________________________________________________
+	
+	//CREAR COMENTARIOS:
+
+		CREATE TABLE CURSO (
+			ID_CURSO NUMBER,
+			DESCRIPCION VARCHAR2(50),
+			NUM_ALUMNOS NUMBER,
+			CONSTRAINT PK_CURSO PRIMARY KEY (ID_CURSO)
+			
+			);
+			
+			COMMENT ON TABLE CURSO IS 'Tabla de cursos';
+			COMMENT ON COLUN CURSO.ID_CURSO IS 'Columna que identifica el curso';
+			COMMENT ON COLUN CURSO.DESCRIPCION IS 'Columna que indica que curso es';
+			COMMENT ON COLUN CURSO.NUM_ALUMNOS IS 'Columna que indica el numero de alumnos';
+			
+			
+			
+________________________________________________________________________________________________________
+		
+		//EJEMPLO CLAVE FORANEA.
+		
+		CREATE TABLE DEPARTAMENTO (
+			ID_DEPARTAMENTO NUMBER PRIMARY KEY,
+			DESCRIPCION VARCHAR2(50)
+		);
+		
+		CREATE TABLE EMPLEADO (
+			DNI NUMBER,
+			DESCRIPCION VARCHAR2(20),
+			ID_DEPARTAMENTO NUMBER,
+			CONSTRAINT FK_EMPLEADO FOREIGN KEY (ID_DEPARTAMENTO) REFERENCES DEPARTAMENTO (ID_DEPARTAMENTO)
+		);
+		
+________________________________________________________________________________________________________
+		
+		//VALOR POR DEFECTO:
+		
+			CREATE TABLE FAMILIA7 (
+				ID_FAMILIA NUMBER DEFAULT 999,
+				DESCRIPCION VARCHAR2(50)
+			);
+________________________________________________________________________________________________________
+		
+		// NOT NULL QUIERE DECIR QUE NO DEBE ESTAR VACIA.
+		
+			CREATE TABLE FAMILIA (
+				ID_FAMILIA NUMBER DEFAULT 999,
+				DESCRIPCION VARCHAR2(50) NOT NULL
+			);
+			
+________________________________________________________________________________________________________
+		
+		//VALORES UNICOS/UNIQUE.
+		
+		CREATE TABLE ROLES 	(
+			ID_ROL VARCHAR2(20),
+			DESCRIPCCION_ROL VARCHAR2(150) UNIQUE
+			);
+			
+		CREATE TABLE ROLES2(
+			ID_ROL VARCHAR2(20),
+			DESCRIPCCION_ROL VARCHAR2(150),
+			CONSTRAINT PK_UNIQUE UNIQUE(DESCRIPCCION_ROL)
+			);
+		
+________________________________________________________________________________________________________
+	
+	
+	//Dar valores:
+		
+		INSERT INTO CURSO (ID_CURSO, DESCIPCION, NUM_ALUMNOS) VALUES (1, 'primero', 10);
+		INSERT INTO CURSO (ID_CURSO, DESCIPCION, NUM_ALUMNOS) VALUES (2, 'segundo', 10);
+		INSERT INTO CURSO (ID_CURSO, DESCIPCION, NUM_ALUMNOS) VALUES (3, 'tercero', 10);
+		INSERT INTO CURSO (ID_CURSO, DESCIPCION, NUM_ALUMNOS) VALUES (4, 'cuarto',  10);
+
+		COMMIT;
+
+
+
+		INSERT INTO CURSO (ID_CURSO, DESCIPCION, NUM_ALUMNOS) 
+			VALUES (SEC_CURSO.NEXTVAL, 'primero', 10);
+			
+			COMMIT;
+__________________________________________________________________________________________________________
+
+			
+		//Muestra la tabla entera.
+		
+		DESCRIBE (NOMBRE DE LA TABLE);
+
+__________________________________________________________________________________________________________
+
+
+	//Para poner los valores de la tabla automaticamente
+			
+			SEC_(TABLA).CURRVAL
+
+
+			//CREAR TABLA 
+				
+				CREATE TABLE FAMILIA (
+					ID_TIPO NUMBER,
+					DESCRICIPCCION VARCHAR2(100),
+					CONSTRAINT PK_FAMILIA PRIMARY KEY (ID_FAMILIA)
+				);
+
+				CREATE TABLE TIPO (
+					ID_FAMILIA NUMBER,
+					DESCRICIPCCION VARCHAR2(200),
+					ID_FAMILIA NUMBER,
+					CONSTRAINT FK_TIPO FOREIGN KEY (ID_FAMILIA) REFERENCES FAMILIA (ID_FAMILIA)
+				);
+
+
+			//MODIFICAR UN OBJETO:ALTER.
+					
+				ALTER TABLE FAMILIA
+				   ADD  CONSTRAINT PK_FAMILIA PRIMARY KEY (ID_FAMILIA);
+					
+				ALTER TABLE TIPO
+					ADD CONSTRAINT PK_TIPO PRIMARY KEY (ID_TIPO);
+					
+				ALTER TABLE TIPO
+					ADD CONSTRAINT PK_TIPO FOREIGN KEY (ID_FAMILIA) REFERENCES FAMILIA (ID_FAMILIA);
+__________________________________________________________________________________________________
+	
+			//Actualizar tablas: Esto se aplica cuando las tablas con creadas despues con el insert.
+			
+						  
+				UPDATE (NOMBRE_TABLA)
+				
+					SET columna1 = valor1, columna2 = valor2, ...
+					
+					[WHERE condiciones] AND PK = '';
+					
+					COMMIT;
+					
+					
+				--EJEMPLO:
+				
+				UPDATE CLIENTES
+				
+					SET NOMBRE = 'PACO'
+					
+					WHERE DNI = 1;
+					
+					COMMIT;

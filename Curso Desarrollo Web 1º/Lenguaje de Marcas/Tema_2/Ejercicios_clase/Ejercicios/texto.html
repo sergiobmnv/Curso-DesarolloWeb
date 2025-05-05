@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Texto</title>
+</head>
+<body>
+	<h1>Marcas para texto</h1>
+
+	<hr />
+	Ejemplo de texto en negrita 1 --> <b>Negrita con &#60b&#62</b> <br />
+	Ejemplo de texto en negrita 2 --> <strong>Negrita con en negrita con &#60strong&#62</strong> <br />
+	
+	<hr />
+	Ejemplo de subrayado 1 --> 	<u>Texto subrayado con &#60u&#62</u> <br />
+	Ejemplo de subrayado 2 -->  <ins>Texto subrayado con &#60ins&#62</ins> <br />
+	
+	<hr />
+	Ejemplo en cursiva 1 --> <i>Texto en cursiva con &#60i&#62</i> <br />
+	Ejemplo en cursiva 2 --> <em>Texto en cursiva con &#60em&#62</em> <br />
+	Ejemplo en cursiva 3 --> <dfn>Texto en cursiva con &#60dfn&#62</dfn> <br />
+	
+	<hr />
+	Ejemplo tachado 1 --> <del>Texto tachado con &#60del&#62</del> <br />
+	Ejemplo tachado 2 --> <s>Texto tachado con &#60s&#62</s> <br />
+	
+	<hr />
+	Texto en superindice con &#60sup&#62 --> X<sup>2+1</sup> <br />
+	Texto en subindice con &#60sub&#62 --> X<sub>2+1</sub> <br />
+	
+	<hr />
+	Ejemplo de texto normal sin ninguna marca --> Texto normal <br /> 
+	Ejemplo de texto grande --> <big>Texto aumentado con &#60big&#62 </big> <br />
+	Ejemplo de texto pequeño --> <small>Texto mas pequeño con &#60small&#62</small> <br />
+	
+	<hr />
+	Ejemplo de texto con &#60font&#62 pero sin atributos -->
+	<font>
+		Texto con marca font sin aplicar atributos
+	</font><br />
+
+	<hr />
+	Ejemplo de texto con &#60font&#62 con atributo size  -->
+	<font size="7"> <!-- El valor de size oscila entre 1 y 7 y si ponemos un valor menor que 7, automaticamente toma el valor 7-->
+		Texto con marca font y atributo size
+	</font><br />
+
+	<hr />
+	Ejemplo de texto con &#60font&#62 con atributo color  -->
+	<font color="#113300"> <!-- El color se puede marcar de la misma forma que el atributo bgcolor de body-->
+		Texto con marca font con atributo color
+	</font><br />
+
+	<hr />
+	Ejemplo de texto con &#60font&#62 con atributo face ("tipo de letra")  -->
+	<font face="verdana">
+		Texto con marca font con tipo de letra
+	</font><br />
+
+	<hr />
+	Ejemplo de texto con &#60cite&#62 --> <cite>Esto es un ejemplo de cita</cite> <br />
+
+	<hr />
+	Ejemplo de texto con &#60code&#62 --> <code>Esto es un ejemplo de texto de codigo Math.pow</code> <br />
+
+	<!-- 
+		La marca bdo permite cambiar la dirección de texto con el atributo dir
+		El atributo dir puede tomar los valores:
+			- ltr ==== Este es el valor por defecto sino indicamos el atributo dir y hace que el texto se lea/escriba de forma normal
+			-rtl ==== Este valor hace que el texto se muestre al reves.
+	-->
+	<hr />
+	Ejemplo de dirección de texto con &#60bdo&#62 sin indicar atributo --> <bdo>Hola mundo</bdo> <br />
+	Ejemplo de dirección de texto con &#60bdo&#62 con atributo dir y valor ltr --> <bdo dir="ltr">Hola mundo</bdo> <br />
+	Ejemplo de dirección de texto con &#60bdo&#62 con atributo dir y valor ltr --> <bdo dir="rtl">Hola mundo</bdo> <br />
+
+	<!-- La marca PRE pone en HTML el texto tal cual lo escribimos-->
+	<hr />
+	Ejemplo de texto con &#60pre&#62 --->
+	<pre>
+		aa    ahora un tabulador y un enter 	
+				Lorem
+		++
+	</pre> <br />
+
+	<!-- 
+		Con <abbr> y <acronym> ponemos una abreviación o acronimo y para ver el significado del mismo usamos el atributo title, una vez que pones title en la pagina web el texto que es una abreviación sale punteado.
+	-->
+	<hr />
+	Ejemplo de texto con abreviación con marca &#60abbr&#62 --> <abbr title="Hyper Text Mark Lenguaje">HTML</abbr> <br />
+	Ejemplo de texto con abreviación con marca &#60acronym&#62 --> <acronym title="Hyper Text Mark Lenguaje">HTML</acronym> <br />
+
+	<hr />
+	Ejemplo de texto para indicar una dirección postal &#60address&#62 --> <address>C/Real Nº 10 1º A Manzanares Ciudad Real</address> <br />
+
+	<!--
+		El atributo cite es para indicar la url de donde se obtiene la cita (url) pero el navegador no lo muestra
+	-->
+	<hr />
+	Ejemplo de cita corta con &#60q&#62 --> <q cite="http://www.uclm.es">Cita</q>  <br />
+	
+	<hr /> 
+	Ejemplo de cita en bloque con &#60blockquote&#62 --> <blockquote cite="http://www.uclm.es">Cita en bloque</blockquote>  <br />
+
+	<hr /> 
+</body>
+</html>

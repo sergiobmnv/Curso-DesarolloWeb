@@ -1,0 +1,21 @@
+
+
+
+a:hover {
+    background: #c31313;
+}
+
+a:active {
+    background: #20ce60;
+}
+
+a:visited {
+    color: red;
+}
+
+div p:first-line {
+    background-color: blue;
+}
+div p:nth-child(3) {
+    font-size: 30px;
+}

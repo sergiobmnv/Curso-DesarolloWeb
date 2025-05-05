@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Libros con ISBN: <span th:text="${isbnVar}"></span></title>
+</head>
+<body>
+    <h1>Editar Libros con ISBN: <span th:text="${isbnVar}"></span></h1>
+    
+    <!-- Comprobamos si hay libros en la lista -->
+    <div th:if="${librosVar.isEmpty()}">
+            <p>No hay libros que tenga este ISBN.</p>
+    </div>
+    
+    <div th:if="${not librosVar.isEmpty()}">
+	    <form action="#" th:action="@{/editarLibro}" method="post">
+	        <!-- Campo oculto para enviar el ISBN -->
+	        <input type="hidden" name="isbn" th:value="${isbnVar}">
+	        
+	        <div th:each="libro : ${librosVar}">
+	            <div>
+	                <label for="autor">Autor:</label>
+	                <input type="text" id="autor" name="nuevosAutores" th:value="${libro.autor}" required>
+	            </div>
+	            <div>
+	                <label for="titulo">Título:</label>
+	                <input type="text" id="titulo" name="nuevosTitulos" th:value="${libro.titulo}" required>
+	            </div>
+	            <div>
+	                <label for="anio">Año de Publicación:</label>
+	                <input type="text" id="anio" name="nuevosPublicadoEn" th:value="${libro.publicadoEn}" required>
+	            </div>
+	            <hr>
+	        </div>
+	        
+	        <div>
+	            <button type="submit">Guardar Cambios</button>
+	        </div>
+	    </form>
+    </div>
+
+    <p><a th:href="@{/libros}">Volver a la lista de libros</a></p>
+</body>
+</html>

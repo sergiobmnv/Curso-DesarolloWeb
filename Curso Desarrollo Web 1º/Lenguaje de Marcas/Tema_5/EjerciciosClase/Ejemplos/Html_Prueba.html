@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+        #email:invalid {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body >
+<form method="post" action="Ejemplo.php">
+
+    <fieldset>
+        <legend>Colores</legend>
+        <input type="color" list="colors">
+        <datalist id="colors">
+             <option>#0000FF</option>
+             <option>#00FF00</option>
+             <option>#FF0000</option>
+        </datalist> 
+    </fieldset>
+ 
+</br>
+
+   <fieldset>
+        <legend>Usuario</legend>
+        <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre">
+   </fieldset>
+
+</br>
+
+    <fieldset>
+        <legend>Marcado</legend>
+            <div>
+                <input type="radio" name="format" id="txt" value="txt" checked>
+                <label for="txt">Text File</label>
+            </div>
+            <div>
+                <input type="radio" name="format" id="csv" value="csv">
+                <label for="csv">CSV file</label>
+            </div>
+            <div>
+                <input type="radio" name="format" id="html" value="html">
+                <label for="html">HTML file</label>
+            </div>
+    </fieldset>
+
+</br>
+    <fieldset>
+        <legend>Examen</legend>
+        <label for="exam">Fija Una Fecha Para El Examen:</label>
+        <input type="date" id="exam" value="2022-04-20" min="2021-09-01" max="2022-06-30" step="7"/>
+    </fieldset>
+         
+</br>
+    
+    <fieldset>
+        <legend>Email</legend>
+        <label for="email">Introduzca su email</label>
+        <input type="email" id="email">
+    </fieldset>
+    
+</br>
+    
+    <fieldset>
+        <legend>Buscar</legend>
+        <form action="#">
+            <label for="search">Buscar</label>
+                <input type=search id="search" resulcs="2">
+                <input type="submit">
+        </form>
+    </fieldset>
+   
+</br>
+    <fieldset>
+        <legend>Enviar</legend>
+        <label form="enviar">Enviar:</label>
+            <input type="submit" value="FIN">
+    </fieldset>
+    
+</form>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalogo>
+	<CDs_en_oferta>
+		<Titulo>Titulo 1</Titulo>
+		<Artista>Artista 1</Artista>
+		<Pais>Pais 1</Pais>
+		<Compañia_discográfica>Compañia 1</Compañia_discográfica>
+		<Precio>10</Precio>
+		<Año_de_publicacion>2011</Año_de_publicacion>
+	</CDs_en_oferta>
+	<CDs_en_oferta>
+		<Titulo>Titulo 2</Titulo>
+		<Artista>Artista 2</Artista>
+		<Pais>Pais 2</Pais>
+		<Compañia_discográfica>Compañia 2</Compañia_discográfica>
+		<Precio>20</Precio>
+		<Año_de_publicacion>2012</Año_de_publicacion>
+	</CDs_en_oferta>
+	<CDs_en_oferta>
+		<Titulo>Titulo 3</Titulo>
+		<Artista>Artista 3</Artista>
+		<Pais>Pais 3</Pais>
+		<Compañia_discográfica>Compañia 3</Compañia_discográfica>
+		<Precio>30</Precio>
+		<Año_de_publicacion>2013</Año_de_publicacion>
+	</CDs_en_oferta>
+</Catalogo>

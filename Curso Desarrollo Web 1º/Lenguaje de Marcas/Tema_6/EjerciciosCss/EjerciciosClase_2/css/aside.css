@@ -1,0 +1,16 @@
+aside {
+    width: 30%;
+    background-color: rgb(154, 87, 216);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside .ad {
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+    padding: 50px 0px;
+    background-color: cadetblue;
+}

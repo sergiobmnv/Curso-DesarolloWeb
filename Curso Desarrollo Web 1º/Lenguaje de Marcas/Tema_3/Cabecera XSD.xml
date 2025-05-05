@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<xs:schema xmlns:xs ="http://www.w3.org/2001/XMLSchema">
+
+</xs:schema>
+
+
+
+		--Cabecera para poder validar el xsd echo en el xml.--
+		
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<"TEXTO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="DOCUMENTO.xsd">

@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Verdana;
+}
+
+table, th, td{
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px 20px;
+}
+
+tr {
+    background-color: rgb(91, 55, 124);
+    color: rgb(249, 249, 249);
+}
+
+tr:hover {
+    background: #940f0f;
+}

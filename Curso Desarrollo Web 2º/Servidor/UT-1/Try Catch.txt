@@ -1,0 +1,11 @@
+try {
+	
+   div (n1,n2);	
+}
+
+catch ( exception  nombre del objeto) {
+	
+}
+
+En los parentesis tenemos los tipos de errores que queremos controlar.
+El exception engloba todos los errores.

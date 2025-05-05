@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE BIBLIOTECA SYSTEM "Ejercicio1Externa.dtd">
+<BIBLIOTECA>
+	<Libro>
+		<Titulo>Titulo 1</Titulo>
+		<Autor>Autor 1</Autor>
+		<ISBN>ISBN 1</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 2</Titulo>
+		<Autor>Autor 2</Autor>
+		<ISBN>ISBN 2</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 3</Titulo>
+		<Autor>Autor 3</Autor>
+		<ISBN>ISBN 3</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 4</Titulo>
+		<Autor>Autor 4</Autor>
+		<ISBN>ISBN 4</ISBN>
+	</Libro>
+	<Libro>
+		<Titulo>Titulo 5</Titulo>
+		<Autor>Autor 5</Autor>
+		<ISBN>ISBN 5</ISBN>
+	</Libro>
+</BIBLIOTECA>

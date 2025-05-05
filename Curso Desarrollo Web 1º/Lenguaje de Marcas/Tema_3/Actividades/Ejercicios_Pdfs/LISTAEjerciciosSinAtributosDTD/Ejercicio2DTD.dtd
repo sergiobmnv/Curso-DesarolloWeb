@@ -1,0 +1,10 @@
+<!ELEMENT catelera (peliculas)>
+<!ELEMENT peliculas (pelicula)*>
+<!ELEMENT pelicula (titulo, Titulo_orginal, Director, Interpretes, Siponsis, url, clasificacion)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT Titulo_orginal (#PCDATA)>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT Interpretes (#PCDATA)>
+<!ELEMENT Siponsis (#PCDATA)>
+<!ELEMENT url EMPTY>
+<!ELEMENT clasificacion (#PCDATA)>

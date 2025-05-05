@@ -1,0 +1,99 @@
+
+.main .acercade .contenedor .foto img {
+    text-align: center;
+}
+
+.acercade {
+    width: 1500px;
+    margin: 0px auto 100px auto;
+}
+
+.menu {
+
+    width: 1100px;
+    margin: 40px auto;
+}
+
+.menutitulo {
+
+    font-size: 35px;
+    font-weight: normal;
+    padding: 30px;
+    text-align: center;
+}
+
+.fuera {
+    border: 1px solid;
+}
+
+.interior {
+    
+    margin: 5px;
+    border: 1px solid;
+    display: flex;
+}
+
+.decomer {
+    width: 750px;
+}
+
+.decomer h3 {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.detomar {
+    
+    width: 750px;
+}
+
+.detomar h3 {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.plato {
+
+    margin: 20px auto;
+    width: 400px;
+    border-bottom: dotted medium;
+}
+
+.plato .tituplato {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.plato .tituplato p {
+
+
+    margin: 10px 0px;
+}
+
+.plato .tituplato .nombre, .precio {
+    font-size: 20px;
+}
+
+.plato  .descripcion {
+
+    color: #4B4F58;
+}
+
+.galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.galeria .contenedor1, .contenedor2{
+    display: flex;
+    justify-content: stretch;
+    margin: 0px auto;
+}
+
+.galeria .imagen{
+    height: 400px;
+    width: 400px;
+    margin: 0px;
+}

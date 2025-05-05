@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #d87d7d;
+}
+
+
+.contenedor {
+
+    width: 80%;
+    height: 700px;
+    max-width: 800px;
+    background: #2e294a;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  /*   flex-wrap: wrap;  Hace que no se ponga pequeño y baja para la siguiente columna */
+   /* justify-content: space-around;  Hace un espaciado entre bloques por todos los lados */
+   justify-content: flex-start;
+   align-content: stretch;
+
+}
+
+.caja {
+
+    width: 100px;
+    height: 100px;
+    background: #c3d30f;
+    margin: 20px;
+    padding: 20px;
+    font-size: 40px;
+    color: #fff;
+    flex-grow: 1; /* Las cajas se reajustan y si pasan el limite cambia de linea y se ajusta a los px asignados*/
+
+}
+
+.dos {
+
+/*  width: 200px;
+    flex-shrink: 0; */
+
+    height: auto;
+    align-self: center;
+
+}

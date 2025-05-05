@@ -1,0 +1,22 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Verdana;
+    background: url('../img/thumb.jpg');
+    background-size: cover;
+}
+
+.contenedor {
+
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}

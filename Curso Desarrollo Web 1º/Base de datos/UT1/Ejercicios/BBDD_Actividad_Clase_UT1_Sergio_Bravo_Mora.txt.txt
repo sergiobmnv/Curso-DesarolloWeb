@@ -1,0 +1,5 @@
+$lavadora#lavadora#350€#alta gama#electrodomesticos%$secadora#secadora#150€#calidad baja#electrodomesticos%$portatil#hp#683€#alta gama#informatica%$armario#armario#50€#madera de roble#mobiliario%$portatil#asus#670$#baja gama#informatica%$coche#seat ibiza#1500€#bueno#vehiculo%$aspiradora#aspiradora#460€#alta gama#electrodomesticos%$coche#mustang#500000€#alta gama#vehiculo%$portatil#asus#5000€#alta gama#informatica%$portatil#hp#400€#baja gama#informatica%$portatil#apple#3000€#alta gama#informatica%$portatil#hp#300€#baja calidad#informatica%$portatil#hp#500€#bueno#informatica%$portatil#amd#400€#bueno#informatica%$portatil#asus#5000€#bueno#informatica%$portatil#asus#700#alta gama#informatica%
+
+
+EJEMPLO: #DATOS%PRODUCTO%FIN DE FICHEROS.
+

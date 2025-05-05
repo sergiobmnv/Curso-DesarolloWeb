@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mezclas_de_colores [
+    <!ELEMENT mezclas_de_colores (mezcla)*>
+    <!ELEMENT mezcla (color+)>
+        <!ATTLIST mezcla resultado CDATA #REQUIRED>
+    <!ELEMENT color (#PCDATA)>
+]>

@@ -1,0 +1,34 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.caja {
+
+    width: 200px;
+    height: 200px;
+    background: #0e6ba8;
+    margin: 20px;
+    position: relative;
+    /* float: left; Elementos en bloque */
+
+}
+
+.posicionada {
+
+    background: aquamarine;
+    /* position: fixed;  La caja se queda fija*/
+    
+    position: relative;
+
+    /*left: ;
+    right: ;
+    top: ;
+    bottom: ; */
+}

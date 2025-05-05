@@ -1,0 +1,36 @@
+
+	-----INTERNA-----
+	
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE etiqueta [
+	<!ELEMENT etiqueta (nombre, calle, ciudad, pais, codigo)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT calle (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT pais (#PCDATA)>
+	<!ELEMENT codigo (#PCDATA)>
+]>
+
+	<etiqueta>
+		<nombre> Raul </nombre>
+		<calle> Asturias </calle>
+		<ciudad> Madrid </ciudad>
+		<pais> España </pais>
+		<codigo> 13620 </codigo>
+	</etiqueta>
+	
+	
+	
+	-----EXTERNA-----
+	
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE etiqueta SYSTEM ="Interna.dtd">
+
+
+	<etiqueta>
+		<nombre> Raul </nombre>
+		<calle> Asturias </calle>
+		<ciudad> Madrid </ciudad>
+		<pais> España </pais>
+		<codigo> 13620 </codigo>
+	</etiqueta>

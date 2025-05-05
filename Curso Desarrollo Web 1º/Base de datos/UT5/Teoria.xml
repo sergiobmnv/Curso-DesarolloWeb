@@ -1,0 +1,56 @@
+
+
+SET SERVEROUTPUT ON; 
+
+		--Declarar Variables en PL/SQL.
+		
+			NOMBRE VARCHAR2(100) := 'Sergio';
+			EDAD NUMBER := 21;
+			FEC_NAC DATE := '01/09/2002';
+			
+		2º FORMA: nombrevariable <NOMBRE TABLA>.<COLUMNA>%TYPE := <VALOR ASIGNADO>;
+			
+		--Declarar constante (Nunca se modifica).
+			
+			1º FORMA: NOMBRE CONSTANT NUMBER := 10;
+			2º FORMA: NOMBRECONSTANT <NOMBRE TABLA>.<COLUMNA>%TYPE := <VALOR ASIGNADO>;
+			
+			
+		--Printear Mensajes.
+		
+			DBMS_OUTPUT.PUT_LINE("Hola mundo");
+			DBMS_OUTPUT.PUT_LINE('Hola' || nombre);
+			
+			CHR(13) para printearlo todo en una misma line pero que se vea en diferentes lineas.
+			
+			
+-- Ejemplo de declaracion de variables:
+
+		SET SERVEROUTPUT ON;
+
+		DECLARE
+
+			depto emp.deptno%TYPE;
+			nombre VARCHAR2(20);
+			
+		BEGIN
+
+			SELECT EMP.DEPTNO
+			INTO depto
+			FROM EMP EMP
+			WHERE EMP.EMPNO = 7369;
+			
+			DBMS_OUTPUT.PUT_LINE('El nombre depto es: ' || depto);
+		   
+		END;
+		
+		&& --> and
+		|| --> ON
+		! --> not 
+		
+		=
+		<>
+		>=
+		<=
+		>
+		<

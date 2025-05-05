@@ -1,0 +1,24 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+	<Bajas>
+		<Empleado identificador="1">
+			<nombre>Lucia Pérez Gómez</nombre>
+			<Direccion>C/Leal nº5</Direccion>
+			<ocupacion>Ingeniera de Software</ocupacion>
+			<Razon_de_baja>Maternidad</Razon_de_baja>
+		<Empleado identificador="2">
+			<nombre>Andrés Jiménez Roncero</nombre>
+			<Direccion>C/Bautista Nº1</Direccion>
+			<ocupacion>Mantenimiento</ocupacion>
+			<Razon_de_baja>Covid-19</Razon_de_baja>
+		<Empleado identificador="3">
+			<nombre>Manuel López Amante</nombre>
+			<Direccion>C/Avenida Nº32</Direccion>
+			<ocupacion>Administrador de BBDD</ocupacion>
+			<Razon_de_baja>Enfermedad</Razon_de_baja>
+		<Empleado identificador="4">
+			<nombre>Estefanía Rodríguez Beato</nombre>
+			<Direccion>o C/Los Pinos Nº21</Direccion>
+			<ocupacion>Ingeniera de Sistemas Informáticos</ocupacion>
+			<Razon_de_baja>Enfermedad</Razon_de_baja>
+		</Empleado>		
+	</Bajas>

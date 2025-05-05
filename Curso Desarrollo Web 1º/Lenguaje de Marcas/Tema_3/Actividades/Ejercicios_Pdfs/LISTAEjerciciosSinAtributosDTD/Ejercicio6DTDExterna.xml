@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE articulos SYSTEM "Ejercicio6DTD.dtd">
+<articulos>
+	<articulo>
+		<nombre>Nombre articulo 1</nombre>
+		<precio>Precio articulo 1</precio>
+	</articulo>
+	<articulo>
+		<nombre>Nombre articulo 2</nombre>
+		<precio>Precio articulo 2</precio>
+	</articulo>
+	<articulo>
+		<nombre>Nombre articulo 3</nombre>
+		<precio>Precio articulo 3</precio>
+	</articulo>
+</articulos>

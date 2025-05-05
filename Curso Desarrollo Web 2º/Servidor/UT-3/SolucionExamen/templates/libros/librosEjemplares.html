@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cantidad de Libros en la Biblioteca</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Cantidad de Libros en la Biblioteca</h1>
+
+        <!-- Comprobamos si hay libros en la lista -->
+        <div th:if="${librosConCantidad.isEmpty()}">
+            <p>No hay libros disponibles.</p>
+        </div>
+
+        <!-- Mostramos la tabla solo si hay libros -->
+        <div th:if="${not librosConCantidad.isEmpty()}">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+		            	<th>Titulo</th>
+		                <th>Autor</th>
+		                <th>Fecha de Publicación</th>
+		                <th>ISBN</th>
+		                <th>Cantidad</th>
+            		</tr>
+                </thead>
+                <tbody>
+		            <tr th:each="libroConCantidad : ${librosConCantidad}">
+		                <td th:text="${libroConCantidad.libro.titulo}">Título</td>
+		                <td th:text="${libroConCantidad.libro.autor}">Autor</td>
+		                <td th:text="${libroConCantidad.libro.publicadoEn}">Fecha de Publicación</td>
+		                <td th:text="${libroConCantidad.libro.ISBN}">ISBN</td>
+		                <td th:text="${libroConCantidad.cantidad}">Cantidad</td>
+		            </tr>
+        		</tbody>
+            </table>
+        </div>
+
+		<a href="/" class="btn btn-primary mt-3">Pagina Principal</a>
+        <a href="/nuevoLibro" class="btn btn-primary mt-3">Añadir nuevo libro</a>
+        <a href="/ingresarISBNeditar" class="btn btn-primary mt-3">Modificar libro</a>
+        <a href="/ingresarISBEliminar" class="btn btn-primary mt-3">Eliminar libro</a>
+    </div>
+</body>
+</html>

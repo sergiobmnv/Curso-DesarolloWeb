@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaCursos [
+	<!ELEMENT listaCursos (cursos)+ >
+	<!ELEMENT cursos (alumno)* >
+	<!ELEMENT alumno (DNI, nombre, apellido1, apellido2?, asignaturas)>
+	<!ELEMENT DNI (#PCDATA)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellido1 (#PCDATA)>
+	<!ELEMENT apellido2 (#PCDATA)>
+	<!ELEMENT asignaturas (asignatura)+ >
+	<!ELEMENT asignatura (nombre, profesor)>
+		<!ATTLIST asignatura codigo CDATA #REQUIRED>
+	<!ELEMENT profesor (NPR, nombre, apellido1, apellido2?)>
+	<!ELEMENT NPR (#PCDATA)>
+]>
+<listaCursos>
+	<cursos>
+		<alumno>
+			<DNI>123</DNI>
+			<nombre>Nombre 1</nombre>
+			<apellido1>Apellido 1</apellido1>
+			<apellido2>Apellido 2</apellido2>
+			<asignaturas>
+				<asignatura codigo="BBDD">
+					<nombre>Base de datos</nombre>
+					<profesor>
+						<NPR>123</NPR>
+						<nombre>Profesor 1</nombre>
+						<apellido1>Apellido1</apellido1>
+						<apellido2>Apellido2</apellido2>
+					</profesor>
+				</asignatura>
+			</asignaturas>
+		</alumno>
+		<alumno>
+			<DNI>456</DNI>
+			<nombre>Nombre 2</nombre>
+			<apellido1>Apellido 1</apellido1>
+			<asignaturas>
+				<asignatura codigo="SERV">
+					<nombre>Servidor</nombre>
+					<profesor>
+						<NPR>123</NPR>
+						<nombre>Profesor 1</nombre>
+						<apellido1>Apellido1</apellido1>
+					</profesor>
+				</asignatura>
+			</asignaturas>
+		</alumno>
+	</cursos>
+</listaCursos>

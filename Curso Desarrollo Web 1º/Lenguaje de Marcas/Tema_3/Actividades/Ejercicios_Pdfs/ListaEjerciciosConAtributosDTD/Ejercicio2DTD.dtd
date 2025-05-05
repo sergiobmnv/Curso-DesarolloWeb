@@ -1,0 +1,14 @@
+<!ELEMENT tickets (ticket)*>
+<!ELEMENT ticket (Fecha, Hora, Precio, Forma_de_pago)>
+	<!ATTLIST ticket Codigo_del_ticket CDATA #REQUIRED>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Hora (#PCDATA)>
+<!ELEMENT Precio (Precio_sin_IVA, Precio_con_IVA)>
+<!ELEMENT Precio_sin_IVA (#PCDATA)>
+<!ELEMENT Precio_con_IVA (#PCDATA)>
+<!ELEMENT Forma_de_pago (Con_tarjeta | Efectivo)>
+<!ELEMENT Con_tarjeta (Cantidad, Numero_de_tarjeta, Nombre_del_propietario_de_la_tarjeta)>
+<!ELEMENT Cantidad (#PCDATA)>
+<!ELEMENT Numero_de_tarjeta (#PCDATA)>
+<!ELEMENT Nombre_del_propietario_de_la_tarjeta (#PCDATA)>
+<!ELEMENT Efectivo (Cantidad)>

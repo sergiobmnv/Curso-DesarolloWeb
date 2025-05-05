@@ -1,0 +1,13 @@
+
+
+
+**NOTACIÓN DE UNA RELACIÓN**
+
+
+NOMBRES TABLAS --> T --> TAutor --> TClientes
+
+NOMBRES CAMPOS --> Numeros --> n --> nID_ClientesID se repite al final la ID
+			   --> CADENAS --> C --> CNombre
+			   --> FECHAS  --> d --> dFecha.Factura/dFactura
+			   --> BOOLEANOS --> l --> lSexo
+			   --> OBJETOS --> o --> oFotos

@@ -1,0 +1,64 @@
+.footer {
+    background-color: #007b7b;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.logo-section img {
+    width: 150px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+
+.services-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.services-section a:hover {
+    color: goldenrod;
+}
+
+.contact-section p {
+    margin: 5px 0;
+}
+
+h3 {
+    color: goldenrod;
+    text-decoration: underline 2px;
+}
+
+.copyright:hover {
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.correo a {
+    color: goldenrod;
+}

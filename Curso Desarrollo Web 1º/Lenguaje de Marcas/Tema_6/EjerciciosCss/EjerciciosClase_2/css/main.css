@@ -1,0 +1,29 @@
+
+
+.main {
+    background-color: aliceblue;
+    width: 70%;
+    padding: 20px;
+}
+
+.main article .thumb {
+    margin-bottom: 20px;
+}
+
+.main article .thumb img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+.main article h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.main article p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}

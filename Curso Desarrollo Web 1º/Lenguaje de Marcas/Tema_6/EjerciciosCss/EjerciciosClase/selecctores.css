@@ -1,0 +1,38 @@
+/* Selectores universales 
+
+* {
+    color: red;
+} */
+
+/* Selector Etiqueta */
+
+p {
+    color: red;
+}
+
+
+
+/* Selector Indirecto Aplica a todo lo que este dentro del section */
+section p {
+
+    font-family:  monospace;
+}
+
+
+
+/* Selector Directo aplica solo a section sin marcas de por medio
+
+section > p {
+
+    font-weight: bold;
+
+} */
+
+#primero {
+    color: rebeccapurple;
+}
+
+
+.segundo {
+    color: rgb(14, 208, 53);
+}

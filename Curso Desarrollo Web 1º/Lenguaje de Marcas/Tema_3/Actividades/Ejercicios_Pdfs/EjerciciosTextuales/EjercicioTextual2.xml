@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE receta [
+	<!ELEMENT receta (nombre, ingredientes*, elaboracion)>
+		<!ATTLIST receta raciones CDATA #REQUIRED>
+		<!ATTLIST receta dificultad (BAJA | MEDIA | ALTA) "MEDIA">
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT ingredientes (ingrediente)*>
+	<!ELEMENT ingrediente (#PCDATA)>
+		<!ATTLIST ingrediente cantidad CDATA #IMPLIED>
+		<!ATTLIST ingrediente unidad CDATA #IMPLIED>
+	<!ELEMENT elaboracion (#PCDATA)>
+]>
+<receta raciones="2" dificultad="ALTA">
+	<nombre>aaa</nombre>
+	<ingredientes>
+		<ingrediente cantidad="2" unidad="1">bb</ingrediente>
+		<ingrediente>ccc</ingrediente>
+	</ingredientes>
+	<elaboracion>Lorem</elaboracion>
+</receta>

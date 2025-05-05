@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to left, #ffffff, #dbe9e9, #b7d4d3, #93bebd, #6ea9a8, #469594, #008080);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+.logo img {
+    height: 150px;
+    max-height: 100%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    font-size: 10px;
+    padding: 10px 18px;
+}
+
+.marque {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+marquee {
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+    color:rgb(0, 0, 0);
+}
+ 
+.button-entrar {
+    background: #008080;
+    border: 1px solid #008080;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 60px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+  }
+
+  .button-entrar:hover,
+  .button-entrar:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #008080;
+  }
+
+  .button-24:active {
+    opacity: .5;
+  }
+
+  .button-registrate {
+    background: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+  }
+
+  .button-registrate:hover,
+  .button-registrate:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: goldenrod;
+  }
+
+  .button-registrate:active {
+    opacity: .5;
+  }
+
+  /* Estilos para los modales */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+  float: right;
+  right: 15px;
+  top: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #d9534f; /* Rojo suave al pasar el mouse */
+}
+
+
+.modal-logo {
+  width: 180px;
+}
+
+.modal-content h2 {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.5s forwards;
+  color: goldenrod;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.modal-content {
+  background-color: #008080;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+.button-register {
+    background: rgb(255, 255, 255);
+    border: 1px solid goldenrod;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: goldenrod;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 70%;
+}
+.button-register:hover {
+  background-color: #218838;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.9s forwards;
+  animation-delay: 0.2s; /* Para que aparezcan después del h2 */
+}
+
+input:nth-child(1) { animation-delay: 0.2s; }
+input:nth-child(2) { animation-delay: 0.4s; }
+input:nth-child(3) { animation-delay: 0.6s; }
+
+/* Asegúrate de tener esta animación */
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.button-login {
+    background: rgb(255, 255, 255);
+    border: 1px solid goldenrod;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: goldenrod;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 30%;
+}
+
+.button-login:hover {
+  background-color: #218838;
+}

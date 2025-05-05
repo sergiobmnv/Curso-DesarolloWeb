@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eventos ratón</title>
+</head>
+<body>
+	<h1>Eventos ratón</h1>
+
+	<label for="nombre">Nombre - onclick</label>
+	<input type="text" name="nombre" id="nombre" onclick="alert('Un click del ratón');"> <br />
+	<label for="apellido1">Apellido 1 - onDblclick</label>
+	<input type="text" name="apellido1" id="apellido1"  ondblclick="alert('doble click');"> <br />
+	<label for="apellido2">Apellido 2 - onMousedown</label>
+	<input type="text" name="apellido2" id="apellido2" onmousedown="alert('hago clik en el ratón');"> <br />
+	<label for="direccion">Dirección - onMouseup</label>
+	<input type="text" name="direccion" id="direccion" onmouseup="alert('Suelto el click del ratón');"> <br />
+	<label for="telefono">Telefono - onMousemove</label>
+	<input type="text" name="telefono" id="telefono" onmousemove="alert('Me muevo por el elemento HTML');"> <br />
+	<label for="movil">Movil - onMouseover</label>
+	<input type="text" name="movil" id="movil" onmouseover="alert('Entro al campo');"> <br />
+	<label for="libro">Movil - onMouseout</label>
+	<input type="text" name="libro" id="libro" onmouseout="alert('salgo del campo');"> <br />
+</body>
+</html>

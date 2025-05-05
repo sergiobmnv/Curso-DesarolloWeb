@@ -1,0 +1,16 @@
+
+/*Fondo*/
+
+body {
+    background: rgb(63, 131, 143); /*Fondo solido*/
+    background: url('Img/hacker.png'); /*Fondo de imagen*/
+    background-size: 150px; /* Las imagenes se multiplican*/
+    background-attachment: fixed; /*La foto de fondo se queda fija mientras bajas*/
+    background-repeat: no-repeat; /* Hace que no se repita la foto*/
+    background-position: center center; /* Centra la imagen*/
+
+}
+
+h3 {
+    color: rgb(108, 13, 197);
+}

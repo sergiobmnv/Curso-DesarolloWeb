@@ -1,0 +1,41 @@
+
+
+aside {
+    width: 300px;
+    background: #161f26;
+    padding: 20px;
+    color: white;
+    float: left; /* Flotan por la derecha*/
+}
+
+aside .widget {
+    margin-bottom: 20px;
+}
+
+aside .widget .titulo {
+    color: #ff8000;
+    border-bottom: 1px solid #ff8000; /* Subrayado*/
+    margin-bottom: 10px;
+}
+
+aside .widget ul {
+    list-style: none; /* Quitar puntos de los enlaces*/
+}
+
+aside .widget ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding: 10px 0px;
+}
+
+aside .widget ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces*/
+    color: white;
+}
+
+aside .widget ul li a:hover {
+    color: #8f8f8f;
+}
+
+aside .widget p {
+    line-height: 27px;
+}

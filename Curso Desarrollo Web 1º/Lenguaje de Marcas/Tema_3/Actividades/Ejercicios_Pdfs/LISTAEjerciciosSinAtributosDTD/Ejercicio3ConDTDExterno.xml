@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE carta SYSTEM "Ejercicio3DTD.dtd">
+<carta>
+	<emisor_del_pedido>Roberto Sánchez</emisor_del_pedido>
+	<receptor_del_pedido>María Sánchez</receptor_del_pedido>
+	<mensaje>
+		<saludo>Querida María</saludo>
+		<introduccion>Lorem ipsum</introduccion>
+		<cuerpo>Lorem ipsum</cuerpo>
+		<desenlace>Lorem ipsum</desenlace>
+		<despedida>Lorem ipsum</despedida>
+	</mensaje>
+</carta>

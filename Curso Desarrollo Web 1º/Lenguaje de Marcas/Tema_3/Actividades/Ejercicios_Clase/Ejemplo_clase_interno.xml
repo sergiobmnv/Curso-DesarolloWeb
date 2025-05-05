@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE domicilio[
+	<!ELEMENT domicilio (calle, numero, piso, letra, ciudad, provincia, escalera)>
+	<!ELEMENT calle (#PCDATA)>
+	<!ELEMENT numero (#PCDATA)>
+	<!ELEMENT piso (#PCDATA)>
+	<!ELEMENT letra (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT provincia (#PCDATA)>
+	<!ELEMENT escalera EMPTY>
+]>
+<domicilio>
+	<calle>Paz</calle>
+	<numero>54</numero>
+	<piso>1ª</piso>
+	<letra>A</letra>
+	<ciudad>Manzanares</ciudad>
+	<provincia>C.Real</provincia>
+	<escalera/>
+</domicilio>

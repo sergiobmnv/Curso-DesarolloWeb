@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+
+<persona nacimiento="199-10-20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="Ejercicio_2_XSD.xsd">
+	
+	
+	
+<persona nacimiento="1999-10-20">
+	<datos>
+		<nombre>María</nombre>
+		<apellidos>Herrera</apellidos>
+	</datos>
+	<comentario>Ha aprobado la asignatura.</comentario>
+
+</persona>

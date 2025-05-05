@@ -1,0 +1,9 @@
+<!ELEMENT carta (emisor_del_pedido, receptor_del_pedido, mensaje)>
+<!ELEMENT emisor_del_pedido (#PCDATA)>
+<!ELEMENT receptor_del_pedido (#PCDATA)>
+<!ELEMENT mensaje (saludo, introduccion, cuerpo, desenlace, despedida)>
+<!ELEMENT saludo (#PCDATA)>
+<!ELEMENT introduccion (#PCDATA)>
+<!ELEMENT cuerpo (#PCDATA)>
+<!ELEMENT desenlace (#PCDATA)>
+<!ELEMENT despedida (#PCDATA)>

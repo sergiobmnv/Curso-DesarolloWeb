@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestión de Biblioteca - Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .crud-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .crud-buttons a {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 15px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .crud-buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de la Biblioteca El Saber</h1>
+    <p>Seleccione la operación que desea realizar:</p>
+
+    <div class="crud-buttons">
+        <a th:href="@{/libros}">Ver todos los libros</a> <!-- Mostrar lista de libros -->
+        <a th:href="@{/nuevoLibro}">Añadir nuevo libro</a> <!-- Formulario para crear libro -->
+        <a th:href="@{/libros}">Editar un libro</a> <!-- Editar un libro (a través de la lista) -->
+        <a th:href="@{/libros}">Eliminar un libro</a> <!-- Eliminar un libro (a través de la lista) -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+	<h1>LOGIN</h1>
+    <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="pwd">Contraseña:</label>
+        <input type="password" id="pwd" name="pwd" required>
+		<hr>
+        <button type="button" onclick="submitGet()">Iniciar sesión</button>
+    </form>
+	
+    <script>
+    function submitGet() {
+        // Realizar una solicitud AJAX GET a servidor.php usando jQuery
+         var username = $("#username").val();
+         var pwd = $("#pwd").val();
+      
+        
+        $.ajax({
+            type: "GET",
+            url: `/usuarios/${username}/${pwd}`, //CONFIGURAR LA URL PARA QUE DIRIJA AL CONTROLADOR
+            
+            success: function(response) {
+            	//POSIBLES SALIDAS DE RESPONSE 
+            	if(response == "OK"){
+            		console.log("Respuesta del servidor (GET):", "Redirigiendo al lobby");
+            	}else if(response == "404"){
+            		window.alert("Usuario no encontrado.");
+            	}else{
+            		window.alert("Contraseña incorrecta.")
+            	}
+                
+            },
+            error: function(error) {
+                console.error("Error en la solicitud AJAX (GET):", error);
+            }
+        });
+    }
+    </script>
+
+</body>
+</html>
